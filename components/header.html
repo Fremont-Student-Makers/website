@@ -1,0 +1,44 @@
+<head>
+  <base href="https://darkhydraengi.github.io/Fremont-Student-Makers-Website/">
+</head>
+<header class="site-header">
+  <a href="/" class="logo">Fremont Student Makers</a>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    &#9776; <!-- Unicode hamburger icon -->
+  </button>
+
+  <nav class="site-nav">
+  <ul>
+    <li><a href="/Fremont-Student-Makers-Website/index.html" id="nav-home">Home</a></li>
+    <li><a href="/Fremont-Student-Makers-Website/pages/about.html" id="nav-about">About</a></li>
+    <li><a href="/Fremont-Student-Makers-Website/pages/projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="/Fremont-Student-Makers-Website/pages/events.html" id="nav-events">Events</a></li>
+    <li><a href="/Fremont-Student-Makers-Website/pages/donate.html" id="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+  
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    const repoPrefix = '/Fremont-Student-Makers-Website/';  // your GitHub repo name
+
+    function loadHTML(selector, url) {
+      fetch(repoPrefix + url)
+        .then(response => response.text())
+        .then(data => {
+        document.querySelector(selector).innerHTML = data;
+        })
+        .catch(err => console.error(`Error loading ${url}: `, err));
+    }
+
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
+  </script>  
+</header>
+
