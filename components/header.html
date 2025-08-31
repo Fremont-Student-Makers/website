@@ -1,8 +1,8 @@
-<!--
+
 <head>
-  <base href="https://darkhydraengi.github.io/Fremont-Student-Makers-Website/">
+  <base href="https://fremontstudentmakers.org">
 </head>
--->
+
 
 <header class="site-header">
   <a href="/" class="logo">Fremont Student Makers</a>
@@ -30,15 +30,15 @@
     });
 
     
-     // const repoPrefix = '/Fremont-Student-Makers-Website/';  // your GitHub repo name
+     const repoPrefix = '/Fremont-Student-Makers-Website/';  // your GitHub repo name
   
-     // function loadHTML(selector, url) {
-     //   fetch(repoPrefix + url)
-     //     .then(response => response.text())
-     //     .then(data => {
-     //     document.querySelector(selector).innerHTML = data;
+     function loadHTML(selector, url) {
+        fetch(repoPrefix + url)
+          .then(response => response.text())
+          .then(data => {
+          document.querySelector(selector).innerHTML = data;
           })
-     //     .catch(err => console.error(`Error loading ${url}: `, err));
+          .catch(err => console.error(`Error loading ${url}: `, err));
      
     }
 
