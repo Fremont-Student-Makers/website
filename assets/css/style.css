@@ -262,6 +262,20 @@ body {
   border-radius: 5px;
 }
 
+/* Calender */
+.google-calender {
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  margin: 2rem 0;           /* optional vertical spacing */
+}
+.google-calender iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  border: 0;
+}
+
+
 /* Footer */
 .site-footer {
   background: #222;
