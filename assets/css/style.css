@@ -266,7 +266,8 @@ body {
 .google-calender {
   display: flex;
   justify-content: center;  /* horizontal centering */
-  margin: 5rem 0;           /* optional vertical spacing */
+  padding-top: 3rem;
+  margin: 2rem0;           /* optional vertical spacing */
 }
 .google-calender iframe {
   width: 100%;
