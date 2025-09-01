@@ -103,6 +103,13 @@ body {
   color: #222;
 }
 
+.google-calendar iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+}
+
+
 /* Mobile styles */
 @media (max-width: 768px) {
   /* Show toggle button */
