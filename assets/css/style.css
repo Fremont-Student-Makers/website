@@ -19,6 +19,12 @@ body {
   margin: 0 auto;
 }
 
+.logo img {
+  height: 50px; /* or whatever fits your header */
+  width: auto;
+}
+
+
 /* Header */
 .site-header {
   display: flex;
