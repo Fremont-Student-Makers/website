@@ -158,8 +158,11 @@ body {
 
 /* About Preview Section */
 .about-preview {
-  padding: 3rem 1rem;
+  /* padding: 3rem 1rem; */
   text-align: center;
+  padding: 40px 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-preview h2 {
