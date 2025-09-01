@@ -19,11 +19,6 @@ body {
   margin: 0 auto;
 }
 
-.logo img {
-  height: 40px; /* or whatever fits your header */
-  width: auto;
-}
-
 
 /* Header */
 .site-header {
@@ -52,6 +47,11 @@ body {
 
 .site-header .logo a:hover {
   color: #d9480f; /* deep orange highlight on hover */
+}
+
+.logo img {
+  height: 40px; /* or whatever fits your header */
+  width: auto;
 }
 
 .site-nav ul {
