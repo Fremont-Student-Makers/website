@@ -193,8 +193,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 1rem 0;
-
-  max-width: 300px;
 }
 
 .project-card {
