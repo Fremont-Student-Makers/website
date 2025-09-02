@@ -144,6 +144,7 @@ body {
 
 /* Test */
   height: 100vh;
+  justify-content: center;
 }
 
 .hero h1 {
