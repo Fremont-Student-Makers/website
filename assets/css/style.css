@@ -141,6 +141,9 @@ body {
   text-align: center;
   padding: 4rem 1rem;
   background: #e0ecff;
+
+/* Test */
+  height: 100vh;
 }
 
 .hero h1 {
