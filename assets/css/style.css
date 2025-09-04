@@ -146,7 +146,7 @@ body {
   padding: 100px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: column;
   height: 100vh;
   
 }
