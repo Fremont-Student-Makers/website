@@ -271,6 +271,7 @@ body {
 }
 
 .donate-cta p {
+  text-align: center;
   max-width: 900px;
 }
 
