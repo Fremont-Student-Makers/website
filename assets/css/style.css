@@ -262,6 +262,8 @@ body {
   padding: 3rem 1rem;
   background: #004aad;
   color: #fff;
+  max-width: 900px;
+
 }
 
 .donate-cta h2 {
