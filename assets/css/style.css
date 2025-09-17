@@ -192,6 +192,9 @@ body {
 .about-preview p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  width: 50%; /* Or any other specific width */
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
