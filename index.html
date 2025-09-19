@@ -1,109 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fremont Student Makers</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="FSMFavicon.png"/>
-  <base href="https://fremontstudentmakers.org">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fremont Student Makers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .hamburger-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-icon.open span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger-icon.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-icon.open span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .counter-container {
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Fade-in animation styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
 
-  <!-- Header -->
-  <div id="header"></div>
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Fremont Student Makers</h1>
-    <p>Supporting Student Creativity & Innovation Across Fremont</p>
-   <!-- <a href="pages/about.html" class="button">Learn More</a> -->
-  </section>
-   
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Fremont Student Makers</a>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-sky-600 transition-colors">About</a>
+                <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
+                <a href="#events" class="hover:text-sky-600 transition-colors">Events</a>
+                <a href="#donate" class="hover:text-sky-600 transition-colors">Donate</a>
+                <a href="#contact" class="hover:text-sky-600 transition-colors">Contact</a>
+                <a href="#join" class="hover:text-sky-600 transition-colors">Join</a>
+            </div>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden">
+                <button id="hamburger-btn" class="hamburger-icon focus:outline-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-center">
+            <a href="#about" class="block py-3 hover:bg-gray-100 transition-colors">About</a>
+            <a href="#projects" class="block py-3 hover:bg-gray-100 transition-colors">Projects</a>
+            <a href="#events" class="block py-3 hover:bg-gray-100 transition-colors">Events</a>
+            <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
+            <a href="#contact" class="block py-3 hover:bg-gray-100 transition-colors">Contact</a>
+            <a href="#join" class="block py-3 hover:bg-gray-100 transition-colors">Join</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-sky-600 text-white min-h-screen flex items-center justify-center text-center p-8">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Innovate. Create. Build.</h1>
+            <p class="text-xl md:text-2xl mb-8">Empowering the next generation of innovators in Fremont through hands-on projects and collaborative learning.</p>
+            <a href="#join" class="bg-white text-sky-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Join Us Today</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gray-100 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-lg leading-relaxed mb-4">
+                        Fremont Student Makers is a community of passionate young builders, designers, and engineers. We believe that the best way to learn is by doing. Our club provides the resources, mentorship, and space for students to bring their creative ideas to life, from robotics to 3D printing and beyond.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        We are dedicated to fostering a culture of innovation and collaboration, helping students develop critical skills in problem-solving and teamwork.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/400x300/4F46E5/FFFFFF?text=Student+Makers" alt="A group of students working on a project" class="rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/1D4ED8/FFFFFF?text=Robotics+Arm" alt="Robotics project" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
+                    <p class="text-gray-600">
+                        A student-run rocketry team competing in the American Rocketry Challenge.
+                    </p>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/059669/FFFFFF?text=3D+Printer" alt="3D printing project" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
+                    <p class="text-gray-600">
+                        A student-run maker space hosting workshops and build challenges.
+                    </p>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/991B1B/FFFFFF?text=Drone" alt="Drone project" class="rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">MakerSat</h3>
+                    <p class="text-gray-600">
+                        An advanced project where students design, build, and launch a CubeSat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Carousel Section -->
+    <section class="section-padding bg-gray-100 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-center mb-12">Showcase Gallery</h2>
+            <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <img src="https://placehold.co/1200x600/6B7280/FFFFFF?text=Team+Photo+1" alt="Team photo" class="min-w-full h-auto">
+                    <img src="https://placehold.co/1200x600/4B5563/FFFFFF?text=Workshop+1" alt="Workshop photo" class="min-w-full h-auto">
+                    <img src="https://placehold.co/1200x600/374151/FFFFFF?text=Project+Showcase" alt="Project showcase" class="min-w-full h-auto">
+                </div>
+                <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-padding fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
+            <div class="flex justify-center">
+                <!-- Google Calendar Embed -->
+                <!-- To use your own calendar, replace the 'src' URL with your calendar's embed URL from Google Calendar settings. -->
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=en.usa%23holiday%40group.v.calendar.google.com&color=%230B8043&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showNav=1"
+                    style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" class="rounded-xl shadow-lg w-full max-w-4xl"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section-padding bg-sky-600 text-white fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="counter-container">
+                    <h3 id="projects-count" class="text-6xl font-extrabold text-white">0</h3>
+                    <p class="text-xl mt-2">Projects Completed</p>
+                </div>
+                <div class="counter-container">
+                    <h3 id="members-count" class="text-6xl font-extrabold text-white">0</h3>
+                    <p class="text-xl mt-2">Active Members</p>
+                </div>
+                <div class="counter-container">
+                    <h3 id="hours-count" class="text-6xl font-extrabold text-white">0</h3>
+                    <p class="text-xl mt-2">Mentorship Hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="section-padding fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Support Our Mission</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Your donation helps us provide tools, materials, and opportunities for our students. Every contribution, no matter the size, makes a difference in empowering the next generation of makers.
+            </p>
+            <a href="#" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-100 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4">
+                        Have a question about our projects, events, or how to get involved? Feel free to send us a message. We'll get back to you as soon as we can!
+                    </p>
+                    <img src="https://placehold.co/400x300/4F46E5/FFFFFF?text=Contact+Us" alt="A phone and email icon" class="rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 mx-auto">
+                </div>
+                <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
+                    <form>
+                        <div class="mb-4 text-left">
+                            <label for="contact-name" class="block text-gray-700 font-semibold mb-2">Your Name</label>
+                            <input type="text" id="contact-name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="contact-email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
+                            <input type="email" id="contact-email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600">
+                        </div>
+                        <div class="mb-6 text-left">
+                            <label for="contact-message" class="block text-gray-700 font-semibold mb-2">Your Message</label>
+                            <textarea id="contact-message" rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-sky-600 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-700 transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="section-padding fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Become a Member</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Ready to start building? Fill out the form below or contact us to get involved.
+            </p>
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
+                <form>
+                    <div class="mb-4 text-left">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600">
+                    </div>
+                    <div class="mb-4 text-left">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600">
+                    </div>
+                    <div class="mb-6 text-left">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message (Optional)</label>
+                        <textarea id="message" rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-sky-600 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-700 transition-colors">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p>&copy; 2024 Fremont Student Makers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger menu toggle
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburgerBtn.addEventListener('click', () => {
+                hamburgerBtn.classList.toggle('open');
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Carousel functionality
+            const carousel = document.getElementById('carousel');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentIndex = 0;
+
+            const updateCarousel = () => {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2; // Loop to the end
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0; // Loop back to start
+                updateCarousel();
+            });
+
+            // Statistics counter animation
+            const counters = [{
+                id: 'projects-count',
+                target: 50
+            }, {
+                id: 'members-count',
+                target: 150
+            }, {
+                id: 'hours-count',
+                target: 2000
+            }, ];
+
+            const animateCounter = (element, target) => {
+                let current = 0;
+                const increment = target / 200; // Adjust for speed
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(timer);
+                        element.textContent = target;
+                    } else {
+                        element.textContent = Math.ceil(current);
+                    }
+                }, 5);
+            };
+
+            // Intersection Observer for fade-in animation
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Optional: stop observing once it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            fadeElements.forEach(el => observer.observe(el));
 
 
-  <!-- About Preview -->
-  <section class="about-preview">
-    <h2>About Us</h2>
-    <p>We empower student-led STEM, arts, and entrepreneurship clubs in Fremont through mentorship, resources, and collaborative events.</p>
-    <a href="pages/mission.html">Read our mission</a>
-  </section>
+            // Intersection Observer for statistics counter
+            const statsSection = document.querySelector('.section-padding.bg-sky-600');
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            const element = document.getElementById(counter.id);
+                            animateCounter(element, counter.target);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            }); // Trigger when 50% of the section is visible
 
-  <!-- Featured Projects -->
-  <section class="projects">
-    <h2>Featured Student Clubs</h2>
-    <div class="project-cards" id="project-cards"></div>
-    <a href="pages/projects.html" class="button">See All Clubs</a>
-  </section>
-
-  <!-- Donate CTA -->
-  <section class="donate-cta">
-    <h2>Help Support Student Creators</h2>
-    <a href="pages/donate.html" class="button">Donate Now</a>
-  </section>
-
-  <!-- Footer -->
-  <div id="footer"></div>
-
-  <!-- Load Components -->
-  <script>
-    // Load header
-    fetch('components/header.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('header').innerHTML = data);
-
-    // Load footer
-    fetch('components/footer.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
-
-    // Load project cards (example: 3 cards loaded in a row)
-    const loadProjectCards = async () => {
-      const container = document.getElementById('project-cards');
-      const res = await fetch('components/project-card.html');
-      const card = await res.text();
-      container.innerHTML = card; // Example: 3 cards loaded
-    };
-    loadProjectCards();
-
-    // Get current page path, e.g. "/pages/about.html" or "/index.html"
-  const currentPath = window.location.pathname;
-
-  // Map paths to nav link IDs
-  const navMap = {
-    '/index.html': 'nav-home',
-    '/': 'nav-home',              // support root path too (like localhost/)
-    '/pages/about.html': 'nav-about',
-    '/pages/projects.html': 'nav-projects',
-    '/pages/events.html': 'nav-events',
-    '/pages/donate.html': 'nav-donate'
-  };
-
-  // Find the matching nav link id
-  const activeNavId = navMap[currentPath];
-
-  if (activeNavId) {
-    const activeNavLink = document.getElementById(activeNavId);
-    if (activeNavLink) {
-      activeNavLink.classList.add('active');
-    }
-  }
-
-  const repoPrefix = '/Fremont-Student-Makers-Website/';  // your GitHub repo name
-
-  function loadHTML(selector, url) {
-    fetch(repoPrefix + url)
-        .then(response => response.text())
-        .then(data => {
-        document.querySelector(selector).innerHTML = data;
-        })
-        .catch(err => console.error(`Error loading ${url}: `, err));
-  }
-
-  loadHTML('#header-placeholder', 'header.html');
-  loadHTML('#footer-placeholder', 'footer.html');
-
-  </script>
+            statsObserver.observe(statsSection);
+        });
+    </script>
 
 </body>
+
 </html>
