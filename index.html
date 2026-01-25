@@ -83,6 +83,7 @@
             <div class="hidden md:flex space-x-6">
                 <a href="#about" class="hover:text-sky-600 transition-colors">About</a>
                 <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
+                <a href="#officers" class="hover:text-sky-600 transition-colors">Officers</a>
                 <a href="#events" class="hover:text-sky-600 transition-colors">Events</a>
                 <a href="#donate" class="hover:text-sky-600 transition-colors">Donate</a>
                 <a href="#contact" class="hover:text-sky-600 transition-colors">Contact</a>
@@ -101,6 +102,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white text-center">
             <a href="#about" class="block py-3 hover:bg-gray-100 transition-colors">About</a>
             <a href="#projects" class="block py-3 hover:bg-gray-100 transition-colors">Projects</a>
+            <a href="#officers" class="block py-3 hover:bg-gray-100 transition-colors">Officers</a>
             <a href="#events" class="block py-3 hover:bg-gray-100 transition-colors">Events</a>
             <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
             <a href="#contact" class="block py-3 hover:bg-gray-100 transition-colors">Contact</a>
@@ -121,7 +123,7 @@
     <section id="about" class="section-padding bg-gray-100 fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto px-6">
                 <div class="md:w-1/2">
                     <p class="text-lg leading-relaxed mb-4">
                         Fremont Student Makers is a community of passionate young builders, designers, and engineers. We believe that the best way to learn is by doing. Our club provides the resources, mentorship, and space for students to bring their creative ideas to life, from robotics to 3D printing and beyond.
@@ -141,34 +143,59 @@
     <section id="projects" class="section-padding fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Our Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col">
-                    <img src="photos/Untitled_Artwork.png" alt="Untitled Rocketry" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
-                    <p class="text-gray-600 mb-6">
-                        A student-run rocketry team competing in the American Rocketry Challenge.
-                    </p>
-                     <a href="https://untitled-rocketry.github.io/home/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
+            <div class="relative overflow-hidden max-w-6xl mx-auto flex justify-center">
+                <div id="projects-carousel" class="flex gap-8 transition-transform duration-500 ease-in-out w-full sm:max-w-2xl lg:max-w-full">
+                    <!-- Project Card 1 -->
+                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+                        <img src="photos/Untitled_Artwork.png" alt="Untitled Rocketry" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
+                        <p class="text-gray-600 mb-6">
+                            A student-run rocketry team competing in the American Rocketry Challenge.
+                        </p>
+                         <a href="https://untitledrocketry.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+                        <img src="photos/ihsmakerclublogo.png" alt="Irvington Maker Club" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
+                        <p class="text-gray-600 mb-6">
+                            A student-run maker space hosting workshops and build challenges.
+                        </p>
+                        <a href="https://ihsmakers.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+                        <img src="photos/MakerSat.jpg" alt="MakerSat" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">MakerSat</h3>
+                        <p class="text-gray-600 mb-6">
+                            An advanced project where students design, build, and launch a CubeSat.
+                        </p>
+                        <a href="https://makersat.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
+                    </div>
+                    <!-- Project Card 4: Student Projects -->
+                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 items-center justify-center">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                            <h3 class="text-2xl font-semibold mb-2">Student Projects</h3>
+                            <p class="text-gray-600 mb-6">
+                                Explore innovative projects created by our talented student community.
+                            </p>
+                            <button class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Discover</button>
+                        </div>
+                    </div>
                 </div>
-                <!-- Project Card 2 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col">
-                    <img src="photos/ihsmakerclublogo.png" alt="Irvington Maker Club" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
-                    <p class="text-gray-600 mb-6">
-                        A student-run maker space hosting workshops and build challenges.
-                    </p>
-                    <a href="https://ihsmakers.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col">
-                    <img src="photos/MakerSat.jpg" alt="MakerSat" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2">MakerSat</h3>
-                    <p class="text-gray-600 mb-6">
-                        An advanced project where students design, build, and launch a CubeSat.
-                    </p>
-                    <a href="https://makersat.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
-                </div>
+                <button id="projects-prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="projects-next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -231,6 +258,77 @@
         </div>
     </section>
 
+
+    <!-- Officers Section -->
+<section id="officers" class="section-padding bg-gray-100 fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-8">Our Leadership</h2>
+
+    <!-- Officer Menu -->
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <button class="officer-filter bg-sky-600 text-white px-6 py-2 rounded-full font-semibold" data-filter="all">
+        All
+      </button>
+      <button class="officer-filter bg-white text-gray-700 px-6 py-2 rounded-full shadow" data-filter="exec">
+        Executive Board
+      </button>
+      <button class="officer-filter bg-white text-gray-700 px-6 py-2 rounded-full shadow" data-filter="projects">
+        Project Leads
+      </button>
+      <button class="officer-filter bg-white text-gray-700 px-6 py-2 rounded-full shadow" data-filter="mentors">
+        Mentors
+      </button>
+    </div>
+
+    <!-- Officers Grid / Carousel -->
+    <div class="relative overflow-hidden max-w-6xl mx-auto">
+        <div id="officer-carousel" class="flex gap-8 transition-transform duration-500 ease-in-out">
+            <!--Officer Cards-->
+            <div class="officer-card exec bg-white rounded-xl shadow-lg p-6 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+                <img src="photos/officers/Srihari.jpg" class="w-full h-56 object-cover rounded-lg mb-4" alt="President">
+                <h3 class="text-xl font-bold">Srihari Muralidharan</h3>
+                <p class="text-sky-600 font-medium">President</p>
+                <p class="text-sm text-gray-600 mt-2">Leads organization strategy and partnerships.</p>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="mailto:smuralidharan@fremontstudentmakers.org" class="text-sky-600 text-sm hover:underline font-medium">smuralidharan@fremontstudentmakers.org</a>
+                </div>
+            </div>
+
+            <div class="officer-card exec bg-white rounded-xl shadow-lg p-6 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+                <img src="photos/officers/Dylan.jpg" class="w-full h-56 object-cover rounded-lg mb-4" alt="Treasurer">
+                <h3 class="text-xl font-bold">Dylan Kwok</h3>
+                <p class="text-sky-600 font-medium">Treasurer</p>
+                <p class="text-sm text-gray-600 mt-2">Management and operations.</p>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="mailto:dkwok@fremontstudentmakers.org" class="text-sky-600 text-sm hover:underline font-medium">dkwok@fremontstudentmakers.org</a>
+                </div>
+            </div>
+
+            <div class="officer-card projects bg-white rounded-xl shadow-lg p-6 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+                <img src="photos/officers/Renuka.jpg" class="w-full h-56 object-cover rounded-lg mb-4" alt="Secretary">
+                <h3 class="text-xl font-bold">Renuka Sivarajan</h3>
+                <p class="text-sky-600 font-medium">Secretary</p>
+                <p class="text-sm text-gray-600 mt-2">Internal coordination</p>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="mailto:rsivarajan@fremontstudentmakers.org" class="text-sky-600 text-sm hover:underline font-medium">rsivarajan@fremontstudentmakers.org</a>
+                </div>
+            </div>
+        </div>
+        <button id="officer-prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button id="officer-next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+  </div>
+</section>
+
+
     <!-- Donate Section -->
     <section id="donate" class="section-padding fade-in">
         <div class="container mx-auto px-4 text-center">
@@ -248,12 +346,12 @@
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
 
-    <div class="flex flex-col md:flex-row gap-12 items-stretch">
+    <div class="flex flex-col md:flex-row gap-12 justify-center items-start max-w-4xl mx-auto">
 
       <!-- Left column: Contact info + socials -->
-     <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg flex flex-col items-center space-y-6">
+     <div class="md:w-auto bg-white p-8 rounded-xl shadow-lg flex flex-col items-start space-y-6">
 
-          <h3 class="text-2xl font-bold text-center">Get in Touch</h3>
+          <h3 class="text-2xl font-bold">Get in Touch</h3>
         
           <!-- Address -->
           <div class="flex items-center gap-4">
@@ -271,20 +369,6 @@
             </svg>
             <a href="mailto:info@fremontstudentmakers.org" class="text-sky-600 font-medium hover:underline">info@fremontstudentmakers.org</a>
           </div>
-
-          <div class="flex items-center gap-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0v-4a4 4 0 00-8 0v4m8 0v4a4 4 0 01-8 0v-4" />
-            </svg>
-            <a href="mailto:smuralidharan@fremontstudentmakers.org" class="text-sky-600 font-medium hover:underline">smuralidharan@fremontstudentmakers.org</a>
-          </div> 
-        
-         <div class="flex items-center gap-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0v-4a4 4 0 00-8 0v4m8 0v4a4 4 0 01-8 0v-4" />
-            </svg>
-            <a href="mailto:dkwok@fremontstudentmakers.org" class="text-sky-600 font-medium hover:underline">dkwok@fremontstudentmakers.org</a>
-          </div>    
         
        
           <!-- Instagram -->
@@ -298,7 +382,7 @@
         </div>
         
               <!-- Right column: Contact form -->
-      <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
+      <div class="md:w-auto bg-white p-8 rounded-xl shadow-lg">
         <h3 class="text-2xl font-bold mb-6 text-center">Send Us a Message</h3>
         <form action="mailto:info@fremontstudentmakers.org" method="post" enctype="text/plain">
           <div class="mb-4 text-left">
@@ -335,7 +419,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 text-center">
-        <p>&copy; 2024 Fremont Student Makers. 501(c) Nonprofit. EIN: 39-2874617</p>
+        <p>&copy; 2026 Fremont Student Makers. 501(c) Nonprofit. EIN: 39-2874617</p>
     </footer>
 
     <script>
@@ -369,16 +453,80 @@
                 updateCarousel();
             });
 
+            // Officer Carousel functionality
+            const officerCarousel = document.getElementById('officer-carousel');
+            const officerPrevBtn = document.getElementById('officer-prev-btn');
+            const officerNextBtn = document.getElementById('officer-next-btn');
+            let officerIndex = 0;
+            const officerCards = document.querySelectorAll('.officer-card');
+
+            const getCardWidth = () => {
+                const screenWidth = window.innerWidth;
+                if (screenWidth < 640) return 100; // Mobile: 1 card (w-full)
+                if (screenWidth < 1024) return 50; // Tablet: 2 cards (sm:w-1/2)
+                return 33.333; // Desktop: 3 cards (lg:w-1/3)
+            };
+
+            const updateOfficerCarousel = () => {
+                const cardWidth = getCardWidth();
+                officerCarousel.style.transform = `translateX(-${officerIndex * cardWidth}%)`;
+            };
+
+            officerPrevBtn.addEventListener('click', () => {
+                const cardWidth = getCardWidth();
+                const maxIndex = officerCards.length - Math.round(100 / cardWidth);
+                officerIndex = (officerIndex > 0) ? officerIndex - 1 : maxIndex;
+                updateOfficerCarousel();
+            });
+
+            officerNextBtn.addEventListener('click', () => {
+                const cardWidth = getCardWidth();
+                const maxIndex = officerCards.length - Math.round(100 / cardWidth);
+                officerIndex = (officerIndex < maxIndex) ? officerIndex + 1 : 0;
+                updateOfficerCarousel();
+            });
+
+            window.addEventListener('resize', updateOfficerCarousel);
+
+            // Projects Carousel functionality
+            const projectsCarousel = document.getElementById('projects-carousel');
+            const projectsPrevBtn = document.getElementById('projects-prev-btn');
+            const projectsNextBtn = document.getElementById('projects-next-btn');
+            let projectsIndex = 0;
+            const projectCards = document.querySelectorAll('.project-card');
+
+            const updateProjectsCarousel = () => {
+                const cardWidth = getCardWidth();
+                projectsCarousel.style.transform = `translateX(-${projectsIndex * cardWidth}%)`;
+            };
+
+            projectsPrevBtn.addEventListener('click', () => {
+                const cardWidth = getCardWidth();
+                const maxIndex = projectCards.length - Math.round(100 / cardWidth);
+                projectsIndex = (projectsIndex > 0) ? projectsIndex - 1 : maxIndex;
+                updateProjectsCarousel();
+            });
+
+            projectsNextBtn.addEventListener('click', () => {
+                const cardWidth = getCardWidth();
+                const maxIndex = projectCards.length - Math.round(100 / cardWidth);
+                projectsIndex = (projectsIndex < maxIndex) ? projectsIndex + 1 : 0;
+                updateProjectsCarousel();
+            });
+
+            window.addEventListener('resize', updateProjectsCarousel);
+
             // Statistics counter animation
             const counters = [{
                 id: 'projects-count',
-                target: 10
+                target: 20
             }, {
                 id: 'members-count',
-                target: 50
+                target: 60
             }, {
                 id: 'hours-count',
-                target: 100
+                target: 200
+
             }, ];
 
             const animateCounter = (element, target) => {
@@ -394,6 +542,34 @@
                     }
                 }, 5);
             };
+
+
+            // Officer filter menu
+            const filterButtons = document.querySelectorAll('.officer-filter');
+
+            filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Button styles
+                filterButtons.forEach(btn => {
+                btn.classList.remove('bg-sky-600', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+                });
+
+                button.classList.add('bg-sky-600', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-700');
+
+                const filter = button.dataset.filter;
+
+                officerCards.forEach(card => {
+                if (filter === 'all' || card.classList.contains(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+                });
+            });
+            });
+
 
             // Intersection Observer for fade-in animation
             const fadeElements = document.querySelectorAll('.fade-in');
