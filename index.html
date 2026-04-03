@@ -87,6 +87,41 @@
             color: #0284c7;
         }
 
+        .project-category-badge {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            padding: 4px 10px;
+            margin-bottom: 14px;
+        }
+
+        .project-category-badge.team {
+            background: #e0f2fe;
+            color: #075985;
+        }
+
+        .project-category-badge.individual {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .projects-lane-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 8px 0 4px;
+        }
+
+        .projects-lane-copy {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 16px;
+        }
+
         .counter-container {
             position: relative;
             animation: pulse 2s infinite;
@@ -128,8 +163,12 @@
             position: relative;
         }
 
-        .pop-carousel-track[data-carousel-type="projects"] {
+        .pop-carousel-track[data-carousel-type="program-teams"] {
             min-height: 470px;
+        }
+
+        .pop-carousel-track[data-carousel-type="individual-projects"] {
+            min-height: 430px;
         }
 
         .pop-carousel-track[data-carousel-type="showcase"] {
@@ -155,8 +194,12 @@
         }
 
         @media (min-width: 640px) {
-            .pop-carousel-track[data-carousel-type="projects"] {
+            .pop-carousel-track[data-carousel-type="program-teams"] {
                 min-height: 500px;
+            }
+
+            .pop-carousel-track[data-carousel-type="individual-projects"] {
+                min-height: 470px;
             }
 
             .pop-carousel-track[data-carousel-type="showcase"] {
@@ -173,8 +216,12 @@
         }
 
         @media (min-width: 1024px) {
-            .pop-carousel-track[data-carousel-type="projects"] {
+            .pop-carousel-track[data-carousel-type="program-teams"] {
                 min-height: 520px;
+            }
+
+            .pop-carousel-track[data-carousel-type="individual-projects"] {
+                min-height: 500px;
             }
 
             .pop-carousel-track[data-carousel-type="showcase"] {
@@ -202,6 +249,7 @@
             <div class="hidden space-x-6">
                 <a href="#about" class="hover:text-sky-600 transition-colors">About</a>
                 <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
+                <a href="pages/student-projects.html#individual-projects" class="hover:text-sky-600 transition-colors">Portfolios</a>
                 <a href="#officers" class="hover:text-sky-600 transition-colors">Officers</a>
                 <a href="#events" class="hover:text-sky-600 transition-colors">Events</a>
                 <a href="#donate" class="hover:text-sky-600 transition-colors">Donate</a>
@@ -221,6 +269,7 @@
         <nav>
             <a href="#about" class="block py-3 hover:bg-gray-100 transition-colors">About</a>
             <a href="#projects" class="block py-3 hover:bg-gray-100 transition-colors">Projects</a>
+            <a href="pages/student-projects.html#individual-projects" class="block py-3 hover:bg-gray-100 transition-colors">Portfolios</a>
             <a href="#officers" class="block py-3 hover:bg-gray-100 transition-colors">Officers</a>
             <a href="#events" class="block py-3 hover:bg-gray-100 transition-colors">Events</a>
             <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
@@ -261,11 +310,15 @@
     <!-- Projects Section -->
     <section id="projects" class="section-padding fade-in">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Our Projects</h2>
-            <div id="projects-viewport" class="pop-carousel-viewport max-w-6xl mx-auto">
-                <div id="projects-carousel" class="pop-carousel-track w-full" data-carousel-type="projects">
-                    <!-- Project Card 1 -->
-                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+            <h2 class="text-4xl font-bold text-center mb-4">Our Projects</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">We feature both official Program Teams and Individual Projects by student makers on the shared domain.</p>
+
+            <h3 class="projects-lane-title">Program Teams</h3>
+            <p class="projects-lane-copy">Official teams with dedicated focus areas and recurring builds.</p>
+            <div id="program-teams-viewport" class="pop-carousel-viewport max-w-6xl mx-auto">
+                <div id="program-teams-carousel" class="pop-carousel-track w-full" data-carousel-type="program-teams">
+                    <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge team">Program Team</span>
                         <img src="photos/Untitled_Artwork.png" alt="Untitled Rocketry" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
                         <p class="text-gray-600 mb-6">
@@ -273,8 +326,9 @@
                         </p>
                          <a href="https://untitledrocketry.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
-                    <!-- Project Card 2 -->
-                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+
+                    <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge team">Program Team</span>
                         <img src="photos/ihsmakerclublogo.png" alt="Irvington Maker Club" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
                         <p class="text-gray-600 mb-6">
@@ -282,8 +336,9 @@
                         </p>
                         <a href="https://ihsmakers.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
-                    <!-- Project Card 3 -->
-                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+
+                    <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge team">Program Team</span>
                         <img src="photos/MakerSat.jpg" alt="MakerSat" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">MakerSat</h3>
                         <p class="text-gray-600 mb-6">
@@ -292,36 +347,85 @@
                         <a href="https://makersat.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
 
-                    <!-- Project Card 4: Student Projects -->
-                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                    <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge team">Program Team</span>
                         <img src="photos/take3.png" alt="Take 3" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Take 3</h3>
                         <p class="text-gray-600 mb-6">
                             A student team competing in the First Tech Challenge robotics competition.
                         </p>
-                        <a href="https://makersat.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
+                        <a href="https://take3.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
 
-                    <!-- Project Card 5: Learn More -->
-                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
+                    <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
                         <div class="text-center">
+                            <span class="project-category-badge team">Program Team</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                             </svg>
-                            <h3 class="text-2xl font-semibold mb-2">More Student Projects</h3>
+                            <h3 class="text-2xl font-semibold mb-2">Explore All Program Teams</h3>
                             <p class="text-gray-600 mb-6">
-                                See the full student project showcase, including additional builds not featured here.
+                                Browse all official team pages and active team-led initiatives.
                             </p>
                             <a href="pages/student-projects.html" class="inline-block bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Learn More</a>
                         </div>
                     </div>
                 </div>
-                <button id="projects-prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous project">
+                <button id="program-teams-prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous program team">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <button id="projects-next-btn" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Next project">
+                <button id="program-teams-next-btn" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Next program team">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <h3 class="projects-lane-title mt-10">Individual Projects</h3>
+            <p class="projects-lane-copy">Personal maker portfolios hosted under our shared student maker ecosystem.</p>
+            <div id="individual-projects-viewport" class="pop-carousel-viewport max-w-6xl mx-auto">
+                <div id="individual-projects-carousel" class="pop-carousel-track w-full" data-carousel-type="individual-projects">
+                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge individual">Individual Project</span>
+                        <h3 class="text-2xl font-semibold mb-2">Solar Rover Build</h3>
+                        <p class="text-gray-600 mb-6">A lightweight autonomous rover prototype built by a student team member for terrain testing.</p>
+                        <a href="pages/portfolio-example-solar-rover.html" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">View Portfolio</a>
+                    </div>
+
+                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge individual">Individual Project</span>
+                        <h3 class="text-2xl font-semibold mb-2">Smart Greenhouse Controller</h3>
+                        <p class="text-gray-600 mb-6">Automated temperature, humidity, and lighting control for a small classroom greenhouse setup.</p>
+                        <a href="pages/student-projects.html#individual-projects" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">See Showcase</a>
+                    </div>
+
+                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge individual">Individual Project</span>
+                        <h3 class="text-2xl font-semibold mb-2">3D Printed Assist Grip</h3>
+                        <p class="text-gray-600 mb-6">A modular assistive grip concept focused on affordable fabrication and rapid user feedback loops.</p>
+                        <a href="pages/student-projects.html#individual-projects" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">See Showcase</a>
+                    </div>
+
+                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
+                        <div class="text-center">
+                            <span class="project-category-badge individual">Individual Project</span>
+                            <h3 class="text-2xl font-semibold mb-2">Launch Your Portfolio</h3>
+                            <p class="text-gray-600 mb-6">Use our starter template and submit your project to get featured on the shared domain.</p>
+                            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                                <a href="pages/portfolio-template.html" class="inline-block bg-sky-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-700 transition-colors">Use Template</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Submit Request</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="individual-projects-prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous individual project">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="individual-projects-next-btn" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Next individual project">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
@@ -549,7 +653,10 @@
                 <p class="text-lg mb-8 max-w-2xl mx-auto">
                     Ready to start building? Fill out the form below or contact us to get involved.
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Click here</a>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Join the Community</a>
+                    <a href="pages/portfolio-template.html" class="bg-white border border-sky-600 text-sky-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Build Your Portfolio</a>
+                </div>
             </div>
         </section>    
 
@@ -782,12 +889,12 @@
                 };
             };
 
-            const projectsCarouselController = initPopCarousel({
-                viewportId: 'projects-viewport',
-                trackId: 'projects-carousel',
-                prevButtonId: 'projects-prev-btn',
-                nextButtonId: 'projects-next-btn',
-                itemSelector: '.project-card',
+            const programTeamsCarouselController = initPopCarousel({
+                viewportId: 'program-teams-viewport',
+                trackId: 'program-teams-carousel',
+                prevButtonId: 'program-teams-prev-btn',
+                nextButtonId: 'program-teams-next-btn',
+                itemSelector: '.program-team-card',
                 mobileSpacingFactor: 0.9,
                 mobileSpacingMax: 320,
                 desktopSpacingFactor: 0.48,
@@ -799,6 +906,25 @@
                 farOpacity: 0.3,
                 sideYOffset: 14,
                 heightPadding: 28
+            });
+
+            const individualProjectsCarouselController = initPopCarousel({
+                viewportId: 'individual-projects-viewport',
+                trackId: 'individual-projects-carousel',
+                prevButtonId: 'individual-projects-prev-btn',
+                nextButtonId: 'individual-projects-next-btn',
+                itemSelector: '.individual-project-card',
+                mobileSpacingFactor: 0.9,
+                mobileSpacingMax: 320,
+                desktopSpacingFactor: 0.47,
+                desktopSpacingMax: 420,
+                activeScale: 1.06,
+                nearScale: 0.9,
+                farScale: 0.84,
+                nearOpacity: 0.74,
+                farOpacity: 0.34,
+                sideYOffset: 14,
+                heightPadding: 24
             });
 
             const showcaseCarouselController = initPopCarousel({
@@ -840,7 +966,8 @@
             });
 
             window.addEventListener('resize', () => {
-                projectsCarouselController.refresh();
+                programTeamsCarouselController.refresh();
+                individualProjectsCarouselController.refresh();
                 showcaseCarouselController.refresh();
                 officersCarouselController.refresh();
             });

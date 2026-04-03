@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Rover Build | Fremont Student Makers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-sky-600 text-white py-14">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <a href="student-projects.html#individual-projects" class="inline-flex items-center mb-4 text-sky-100 hover:text-white transition-colors">
+                <span class="mr-2">&larr;</span> Back to Individual Projects
+            </a>
+            <p class="inline-flex text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Individual Project</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">Solar Rover Build</h1>
+            <p class="text-lg text-sky-100 max-w-3xl">By John Doe, Irvington High School. A compact rover optimized for low-power operation and quick testing on uneven terrain.</p>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <article class="container mx-auto px-4 max-w-5xl space-y-8">
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-4">Project Snapshot</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">Status</p>
+                        <p class="text-gray-600">Prototype v2</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">Build Window</p>
+                        <p class="text-gray-600">Sep 2025 - Mar 2026</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">Focus</p>
+                        <p class="text-gray-600">Robotics + Power Systems</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <img src="../photos/UntitledRocket.png" alt="Rover testing outdoors" class="w-full h-64 object-cover rounded-lg">
+                    <img src="../photos/Meeting.jpg" alt="Rover electronics setup" class="w-full h-64 object-cover rounded-lg">
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8 text-gray-700 space-y-4">
+                <h2 class="text-2xl font-bold text-gray-900">Build Process</h2>
+                <p><strong>Challenge:</strong> Extend run-time without increasing overall rover weight.</p>
+                <p><strong>Approach:</strong> Shifted to a lighter chassis, higher-efficiency motors, and tuned PWM behavior for flatter draw.</p>
+                <p><strong>Iterations:</strong> Reworked wheel geometry after early drift and slipping during incline tests.</p>
+                <p><strong>Outcome:</strong> Improved stability and longer test sessions across mixed surfaces.</p>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-4">Tools Used</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Fusion 360 for CAD</li>
+                    <li>Arduino Nano and motor drivers</li>
+                    <li>PLA printed drivetrain prototypes</li>
+                    <li>Python notebook for telemetry checks</li>
+                </ul>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-4">Next Steps</h2>
+                <p class="text-gray-700">Integrate navigation waypoints and add a lightweight weatherproof shell for field events.</p>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

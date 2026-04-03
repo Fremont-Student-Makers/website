@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Template | Fremont Student Makers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-sky-600 text-white py-14">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <a href="../index.html#projects" class="inline-flex items-center mb-4 text-sky-100 hover:text-white transition-colors">
+                <span class="mr-2">&larr;</span> Back to Home Projects
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">Student Portfolio Template</h1>
+            <p class="text-lg text-sky-100 max-w-3xl">
+                Copy this page as your starter. Replace placeholder text, images, and links, then submit your portfolio request.
+            </p>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <section class="container mx-auto px-4 max-w-5xl mb-10">
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8 border border-sky-100">
+                <h2 class="text-2xl font-bold mb-4">Publishing Steps</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                    <li>Duplicate this file and rename it using: portfolio-firstname-lastname-project.html</li>
+                    <li>Replace all placeholder content and keep sections in the same order.</li>
+                    <li>Use image paths from the photos folder and verify links work.</li>
+                    <li>Submit your request with the Google Form below.</li>
+                </ol>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block text-center bg-sky-600 text-white font-bold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">Submit Portfolio Request</a>
+                    <a href="student-projects.html#individual-projects" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full hover:bg-sky-50 transition-colors">View Published Portfolios</a>
+                </div>
+            </div>
+        </section>
+
+        <article class="container mx-auto px-4 max-w-5xl space-y-8">
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <p class="inline-flex text-xs font-bold uppercase tracking-wide bg-amber-100 text-amber-800 rounded-full px-3 py-1 mb-4">Individual Project</p>
+                <h2 class="text-3xl font-bold mb-2">[Project Name]</h2>
+                <p class="text-gray-600 text-lg">By [Your Name], [School/Class Year]</p>
+                <p class="mt-4 text-gray-700">One-paragraph summary of what you built, why you built it, and what makes it exciting.</p>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Project Snapshot</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">Status</p>
+                        <p class="text-gray-600">Prototype / In Progress / Production</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">Build Window</p>
+                        <p class="text-gray-600">Month Year - Month Year</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">Focus</p>
+                        <p class="text-gray-600">Robotics / Aerospace / Hardware / Design</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Gallery</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <img src="../photos/TeamPhoto.jpg" alt="Project image placeholder 1" class="w-full h-64 object-cover rounded-lg">
+                    <img src="../photos/Meeting.jpg" alt="Project image placeholder 2" class="w-full h-64 object-cover rounded-lg">
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Build Process</h3>
+                <div class="space-y-4 text-gray-700">
+                    <p><strong>Challenge:</strong> Describe the problem and constraints.</p>
+                    <p><strong>Approach:</strong> Explain design decisions and tradeoffs.</p>
+                    <p><strong>Iterations:</strong> Show what changed between versions and what you learned.</p>
+                    <p><strong>Outcome:</strong> Share results, metrics, or demo notes.</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Tools and Resources</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>CAD: [Tool name]</li>
+                    <li>Electronics: [Parts and boards]</li>
+                    <li>Software: [Languages/frameworks]</li>
+                    <li>Fabrication: [3D printer, laser cutter, CNC, etc.]</li>
+                </ul>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Links</h3>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="#" class="inline-block text-center bg-sky-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">Demo Video</a>
+                    <a href="#" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-semibold py-3 px-6 rounded-full hover:bg-sky-50 transition-colors">GitHub Repo</a>
+                    <a href="#" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-semibold py-3 px-6 rounded-full hover:bg-sky-50 transition-colors">Build Log</a>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-4">Contact</h3>
+                <p class="text-gray-700">[Your Name] | <a href="mailto:yourname@fremontstudentmakers.org" class="text-sky-600 hover:underline">yourname@fremontstudentmakers.org</a></p>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
