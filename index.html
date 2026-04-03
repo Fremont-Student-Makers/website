@@ -40,6 +40,53 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
+        .menu-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 24, 39, 0.55);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+            z-index: 55;
+        }
+
+        .menu-backdrop.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .menu-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: min(86vw, 360px);
+            background: #ffffff;
+            box-shadow: -18px 0 40px rgba(17, 24, 39, 0.2);
+            transform: translateX(100%);
+            transition: transform 0.35s ease;
+            z-index: 60;
+            padding: 88px 0 24px;
+        }
+
+        .menu-drawer.open {
+            transform: translateX(0);
+        }
+
+        .menu-drawer a {
+            display: block;
+            padding: 16px 28px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1f2937;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .menu-drawer a:hover {
+            background-color: #f3f4f6;
+            color: #0284c7;
+        }
+
         .counter-container {
             position: relative;
             animation: pulse 2s infinite;
@@ -151,8 +198,8 @@
     <nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-gray-800">Fremont Student Makers</a>
-            <!-- Desktop Nav -->
-            <div class="hidden md:flex space-x-6">
+            <!-- Header Nav (drawer is used across screen sizes) -->
+            <div class="hidden space-x-6">
                 <a href="#about" class="hover:text-sky-600 transition-colors">About</a>
                 <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
                 <a href="#officers" class="hover:text-sky-600 transition-colors">Officers</a>
@@ -161,17 +208,17 @@
                 <a href="#contact" class="hover:text-sky-600 transition-colors">Contact</a>
                 <a href="#join" class="hover:text-sky-600 transition-colors">Join</a>
             </div>
-            <!-- Hamburger Icon for Mobile -->
-            <div class="md:hidden">
-                <button id="hamburger-btn" class="hamburger-icon focus:outline-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <button id="hamburger-btn" class="hamburger-icon focus:outline-none" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white text-center">
+    </nav>
+
+    <div id="mobile-menu-backdrop" class="menu-backdrop"></div>
+    <aside id="mobile-menu" class="menu-drawer" aria-hidden="true">
+        <nav>
             <a href="#about" class="block py-3 hover:bg-gray-100 transition-colors">About</a>
             <a href="#projects" class="block py-3 hover:bg-gray-100 transition-colors">Projects</a>
             <a href="#officers" class="block py-3 hover:bg-gray-100 transition-colors">Officers</a>
@@ -179,8 +226,8 @@
             <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
             <a href="#contact" class="block py-3 hover:bg-gray-100 transition-colors">Contact</a>
             <a href="#join" class="block py-3 hover:bg-gray-100 transition-colors">Join</a>
-        </div>
-    </nav>
+        </nav>
+    </aside>
 
     <!-- Hero Section -->
     <header class="bg-sky-600 text-white min-h-screen flex items-center justify-center text-center p-8">
@@ -516,10 +563,34 @@
             // Hamburger menu toggle
             const hamburgerBtn = document.getElementById('hamburger-btn');
             const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            const toggleMenu = (forceOpen) => {
+                const shouldOpen = forceOpen ?? !mobileMenu.classList.contains('open');
+
+                hamburgerBtn.classList.toggle('open', shouldOpen);
+                hamburgerBtn.setAttribute('aria-expanded', String(shouldOpen));
+                mobileMenu.classList.toggle('open', shouldOpen);
+                mobileMenu.setAttribute('aria-hidden', String(!shouldOpen));
+                mobileMenuBackdrop.classList.toggle('open', shouldOpen);
+                document.body.classList.toggle('overflow-hidden', shouldOpen);
+            };
 
             hamburgerBtn.addEventListener('click', () => {
-                hamburgerBtn.classList.toggle('open');
-                mobileMenu.classList.toggle('hidden');
+                toggleMenu();
+            });
+
+            mobileMenuBackdrop.addEventListener('click', () => toggleMenu(false));
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                    toggleMenu(false);
+                }
             });
 
             // Shared pop-out carousel functionality
