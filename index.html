@@ -71,18 +71,29 @@
             transform: translateY(0);
         }
 
-        .projects-carousel-viewport {
+        .pop-carousel-viewport {
             position: relative;
             overflow: hidden;
             padding: 20px 0 12px;
         }
 
-        #projects-carousel {
+        .pop-carousel-track {
             position: relative;
+        }
+
+        .pop-carousel-track[data-carousel-type="projects"] {
             min-height: 470px;
         }
 
-        .project-card {
+        .pop-carousel-track[data-carousel-type="showcase"] {
+            min-height: 360px;
+        }
+
+        .pop-carousel-track[data-carousel-type="officers"] {
+            min-height: 430px;
+        }
+
+        .pop-carousel-item {
             position: absolute;
             top: 0;
             left: 50%;
@@ -92,26 +103,42 @@
             will-change: transform, opacity;
         }
 
-        .project-card.is-active {
+        .pop-carousel-item.is-active {
             box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.28);
         }
 
         @media (min-width: 640px) {
-            #projects-carousel {
+            .pop-carousel-track[data-carousel-type="projects"] {
                 min-height: 500px;
             }
 
-            .project-card {
+            .pop-carousel-track[data-carousel-type="showcase"] {
+                min-height: 420px;
+            }
+
+            .pop-carousel-track[data-carousel-type="officers"] {
+                min-height: 460px;
+            }
+
+            .pop-carousel-item {
                 width: min(46vw, 380px);
             }
         }
 
         @media (min-width: 1024px) {
-            #projects-carousel {
+            .pop-carousel-track[data-carousel-type="projects"] {
                 min-height: 520px;
             }
 
-            .project-card {
+            .pop-carousel-track[data-carousel-type="showcase"] {
+                min-height: 470px;
+            }
+
+            .pop-carousel-track[data-carousel-type="officers"] {
+                min-height: 500px;
+            }
+
+            .pop-carousel-item {
                 width: min(30vw, 380px);
             }
         }
@@ -188,10 +215,10 @@
     <section id="projects" class="section-padding fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Our Projects</h2>
-            <div id="projects-viewport" class="projects-carousel-viewport max-w-6xl mx-auto">
-                <div id="projects-carousel" class="w-full">
+            <div id="projects-viewport" class="pop-carousel-viewport max-w-6xl mx-auto">
+                <div id="projects-carousel" class="pop-carousel-track w-full" data-carousel-type="projects">
                     <!-- Project Card 1 -->
-                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
                         <img src="photos/Untitled_Artwork.png" alt="Untitled Rocketry" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
                         <p class="text-gray-600 mb-6">
@@ -200,7 +227,7 @@
                          <a href="https://untitledrocketry.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
                     <!-- Project Card 2 -->
-                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
                         <img src="photos/ihsmakerclublogo.png" alt="Irvington Maker Club" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
                         <p class="text-gray-600 mb-6">
@@ -209,7 +236,7 @@
                         <a href="https://ihsmakers.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
                     <!-- Project Card 3 -->
-                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
                         <img src="photos/MakerSat.jpg" alt="MakerSat" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">MakerSat</h3>
                         <p class="text-gray-600 mb-6">
@@ -219,7 +246,7 @@
                     </div>
 
                     <!-- Project Card 4: Student Projects -->
-                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
                         <img src="photos/take3.png" alt="Take 3" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Take 3</h3>
                         <p class="text-gray-600 mb-6">
@@ -228,17 +255,17 @@
                         <a href="https://makersat.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
 
-                    <!-- Project Card 5: Student Projects -->
-                    <div class="project-card bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
+                    <!-- Project Card 5: Learn More -->
+                    <div class="project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
                         <div class="text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                             </svg>
-                            <h3 class="text-2xl font-semibold mb-2">Student Projects</h3>
+                            <h3 class="text-2xl font-semibold mb-2">More Student Projects</h3>
                             <p class="text-gray-600 mb-6">
-                                Explore innovative projects created by our talented student community.
+                                See the full student project showcase, including additional builds not featured here.
                             </p>
-                            <button class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Discover</button>
+                            <a href="pages/student-projects.html" class="inline-block bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -260,18 +287,24 @@
     <section class="section-padding bg-gray-100 fade-in">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold text-center mb-12">Showcase Gallery</h2>
-            <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl">
-                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-                    <img src="photos/TeamPhoto.jpg" alt="Team photo" class="min-w-full h-64 sm:h-80 md:h-96 object-cover">
-                    <img src="photos/Meeting.jpg" alt="Workshop photo" class="min-w-full h-64 sm:h-80 md:h-96 object-cover">
-                    <img src="photos/UntitledRocket.png" alt="Project showcase" class="min-w-full h-64 sm:h-80 md:h-96 object-cover">
+            <div id="showcase-viewport" class="pop-carousel-viewport relative w-full max-w-5xl mx-auto">
+                <div id="carousel" class="pop-carousel-track w-full" data-carousel-type="showcase">
+                    <div class="showcase-card pop-carousel-item bg-white rounded-xl shadow-lg p-3">
+                        <img src="photos/TeamPhoto.jpg" alt="Team photo" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
+                    </div>
+                    <div class="showcase-card pop-carousel-item bg-white rounded-xl shadow-lg p-3">
+                        <img src="photos/Meeting.jpg" alt="Workshop photo" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
+                    </div>
+                    <div class="showcase-card pop-carousel-item bg-white rounded-xl shadow-lg p-3">
+                        <img src="photos/UntitledRocket.png" alt="Project showcase" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
+                    </div>
                 </div>
-                <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none">
+                <button id="prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous showcase image">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none">
+                <button id="next-btn" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Next showcase image">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
@@ -337,10 +370,10 @@
     </div>
 
     <!-- Officers Grid / Carousel -->
-    <div class="relative overflow-hidden max-w-6xl mx-auto">
-        <div id="officer-carousel" class="flex gap-8 transition-transform duration-500 ease-in-out">
+    <div id="officer-viewport" class="pop-carousel-viewport max-w-6xl mx-auto">
+        <div id="officer-carousel" class="pop-carousel-track w-full" data-carousel-type="officers">
             <!--Officer Cards-->
-            <div class="officer-card exec bg-white rounded-xl shadow-lg p-6 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="officer-card pop-carousel-item exec bg-white rounded-xl shadow-lg p-6">
                 <img src="photos/officers/Srihari.jpg" class="w-full h-56 object-cover rounded-lg mb-4" alt="President">
                 <h3 class="text-xl font-bold">Srihari Muralidharan</h3>
                 <p class="text-sky-600 font-medium">President</p>
@@ -350,7 +383,7 @@
                 </div>
             </div>
 
-            <div class="officer-card exec bg-white rounded-xl shadow-lg p-6 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="officer-card pop-carousel-item exec bg-white rounded-xl shadow-lg p-6">
                 <img src="photos/officers/Dylan.jpg" class="w-full h-56 object-cover rounded-lg mb-4" alt="Treasurer">
                 <h3 class="text-xl font-bold">Dylan Kwok</h3>
                 <p class="text-sky-600 font-medium">Treasurer</p>
@@ -360,7 +393,7 @@
                 </div>
             </div>
 
-            <div class="officer-card projects bg-white rounded-xl shadow-lg p-6 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="officer-card pop-carousel-item projects bg-white rounded-xl shadow-lg p-6">
                 <img src="photos/officers/Renuka.jpg" class="w-full h-56 object-cover rounded-lg mb-4" alt="Secretary">
                 <h3 class="text-xl font-bold">Renuka Sivarajan</h3>
                 <p class="text-sky-600 font-medium">Secretary</p>
@@ -370,12 +403,12 @@
                 </div>
             </div>
         </div>
-        <button id="officer-prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10">
+        <button id="officer-prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous officer">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
         </button>
-        <button id="officer-next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10">
+        <button id="officer-next-btn" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Next officer">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -489,156 +522,257 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Carousel functionality
-            const carousel = document.getElementById('carousel');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            let currentIndex = 0;
-
-            const updateCarousel = () => {
-                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-            };
-
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2; // Loop to the end
-                updateCarousel();
-            });
-
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0; // Loop back to start
-                updateCarousel();
-            });
-
-            // Officer Carousel functionality
-            const officerCarousel = document.getElementById('officer-carousel');
-            const officerPrevBtn = document.getElementById('officer-prev-btn');
-            const officerNextBtn = document.getElementById('officer-next-btn');
-            let officerIndex = 0;
-            const officerCards = document.querySelectorAll('.officer-card');
-
-            const getCardWidth = () => {
-                const screenWidth = window.innerWidth;
-                if (screenWidth < 640) return 100; // Mobile: 1 card (w-full)
-                if (screenWidth < 1024) return 50; // Tablet: 2 cards (sm:w-1/2)
-                return 33.333; // Desktop: 3 cards (lg:w-1/3)
-            };
-
-            const updateOfficerCarousel = () => {
-                const cardWidth = getCardWidth();
-                officerCarousel.style.transform = `translateX(-${officerIndex * cardWidth}%)`;
-            };
-
-            officerPrevBtn.addEventListener('click', () => {
-                const cardWidth = getCardWidth();
-                const maxIndex = officerCards.length - Math.round(100 / cardWidth);
-                officerIndex = (officerIndex > 0) ? officerIndex - 1 : maxIndex;
-                updateOfficerCarousel();
-            });
-
-            officerNextBtn.addEventListener('click', () => {
-                const cardWidth = getCardWidth();
-                const maxIndex = officerCards.length - Math.round(100 / cardWidth);
-                officerIndex = (officerIndex < maxIndex) ? officerIndex + 1 : 0;
-                updateOfficerCarousel();
-            });
-
-            window.addEventListener('resize', updateOfficerCarousel);
-
-            // Projects Carousel functionality
-            const projectsViewport = document.getElementById('projects-viewport');
-            const projectsCarousel = document.getElementById('projects-carousel');
-            const projectsPrevBtn = document.getElementById('projects-prev-btn');
-            const projectsNextBtn = document.getElementById('projects-next-btn');
-            const projectCards = Array.from(document.querySelectorAll('.project-card'));
-            let projectsIndex = 0;
-            let touchStartX = 0;
-            let touchDeltaX = 0;
-
-            const getProjectOffset = (index, activeIndex, total) => {
+            // Shared pop-out carousel functionality
+            const getCircularOffset = (index, activeIndex, total) => {
                 let offset = index - activeIndex;
                 if (offset > total / 2) offset -= total;
                 if (offset < -total / 2) offset += total;
                 return offset;
             };
 
-            const updateProjectsHeight = () => {
-                let maxHeight = 0;
-                projectCards.forEach(card => {
-                    maxHeight = Math.max(maxHeight, card.offsetHeight);
-                });
+            const initPopCarousel = ({
+                viewportId,
+                trackId,
+                prevButtonId,
+                nextButtonId,
+                itemSelector,
+                mobileSpacingFactor,
+                mobileSpacingMax,
+                desktopSpacingFactor,
+                desktopSpacingMax,
+                activeScale,
+                nearScale,
+                farScale,
+                nearOpacity,
+                farOpacity,
+                sideYOffset,
+                heightPadding
+            }) => {
+                const viewport = document.getElementById(viewportId);
+                const track = document.getElementById(trackId);
+                const prevButton = document.getElementById(prevButtonId);
+                const nextButton = document.getElementById(nextButtonId);
+                const allItems = Array.from(track.querySelectorAll(itemSelector));
+                let visibleItems = [...allItems];
+                let activeIndex = 0;
+                let touchStartX = 0;
+                let touchDeltaX = 0;
+                const currentOffsets = new Map();
 
-                projectsCarousel.style.height = `${maxHeight + 28}px`;
-            };
-
-            const updateProjectsCarousel = () => {
-                const viewportWidth = projectsViewport.clientWidth;
-                const isMobile = window.innerWidth < 640;
-                const spacing = isMobile ? Math.min(viewportWidth * 0.9, 320) : Math.min(viewportWidth * 0.48, 430);
-
-                projectCards.forEach((card, idx) => {
-                    const offset = getProjectOffset(idx, projectsIndex, projectCards.length);
-                    const absOffset = Math.abs(offset);
-
-                    card.classList.toggle('is-active', offset === 0);
-
-                    if (absOffset > 2) {
-                        card.style.opacity = '0';
-                        card.style.pointerEvents = 'none';
-                        card.style.zIndex = '0';
-                        card.style.transform = `translate3d(calc(-50% + ${offset * spacing}px), 0, 0) scale(0.78)`;
+                const normalizeIndex = () => {
+                    if (!visibleItems.length) {
+                        activeIndex = 0;
                         return;
                     }
 
-                    const scale = offset === 0 ? 1.07 : absOffset === 1 ? 0.9 : 0.82;
-                    const opacity = offset === 0 ? 1 : absOffset === 1 ? 0.72 : 0.3;
-                    const yOffset = offset === 0 ? 0 : 14;
+                    activeIndex = (activeIndex + visibleItems.length) % visibleItems.length;
+                };
 
-                    card.style.opacity = String(opacity);
-                    card.style.pointerEvents = offset === 0 ? 'auto' : 'none';
-                    card.style.zIndex = String(30 - absOffset);
-                    card.style.transform = `translate3d(calc(-50% + ${offset * spacing}px), ${yOffset}px, 0) scale(${scale})`;
+                const applyTransforms = () => {
+                    if (!visibleItems.length) {
+                        allItems.forEach(item => {
+                            item.classList.remove('is-active');
+                            item.style.opacity = '0';
+                            item.style.pointerEvents = 'none';
+                            item.style.zIndex = '0';
+                            currentOffsets.set(item, null);
+                        });
+                        track.style.height = '0px';
+                        return;
+                    }
+
+                    const viewportWidth = viewport.clientWidth;
+                    const isMobile = window.innerWidth < 640;
+                    const spacing = isMobile
+                        ? Math.min(viewportWidth * mobileSpacingFactor, mobileSpacingMax)
+                        : Math.min(viewportWidth * desktopSpacingFactor, desktopSpacingMax);
+
+                    let tallestItem = 0;
+                    allItems.forEach(item => {
+                        tallestItem = Math.max(tallestItem, item.offsetHeight);
+                    });
+                    track.style.height = `${tallestItem + heightPadding}px`;
+
+                    const visibleSet = new Set(visibleItems);
+                    allItems.forEach(item => {
+                        if (visibleSet.has(item)) return;
+                        item.classList.remove('is-active');
+                        item.style.opacity = '0';
+                        item.style.pointerEvents = 'none';
+                        item.style.zIndex = '0';
+                        item.style.transform = 'translate3d(-50%, 0, 0) scale(0.78)';
+                        currentOffsets.set(item, null);
+                    });
+
+                    visibleItems.forEach((item, index) => {
+                        const offset = getCircularOffset(index, activeIndex, visibleItems.length);
+                        const absoluteOffset = Math.abs(offset);
+                        currentOffsets.set(item, offset);
+
+                        item.classList.toggle('is-active', offset === 0);
+
+                        if (absoluteOffset > 2) {
+                            item.style.opacity = '0';
+                            item.style.pointerEvents = 'none';
+                            item.style.zIndex = '0';
+                            item.style.transform = `translate3d(calc(-50% + ${offset * spacing}px), 0, 0) scale(0.78)`;
+                            return;
+                        }
+
+                        const scale = offset === 0 ? activeScale : absoluteOffset === 1 ? nearScale : farScale;
+                        const opacity = offset === 0 ? 1 : absoluteOffset === 1 ? nearOpacity : farOpacity;
+                        const yOffset = offset === 0 ? 0 : sideYOffset;
+
+                        item.style.opacity = String(opacity);
+                        item.style.pointerEvents = absoluteOffset <= 1 ? 'auto' : 'none';
+                        item.style.zIndex = String(30 - absoluteOffset);
+                        item.style.transform = `translate3d(calc(-50% + ${offset * spacing}px), ${yOffset}px, 0) scale(${scale})`;
+                    });
+                };
+
+                const goToNext = () => {
+                    if (!visibleItems.length) return;
+                    activeIndex += 1;
+                    normalizeIndex();
+                    applyTransforms();
+                };
+
+                const goToPrev = () => {
+                    if (!visibleItems.length) return;
+                    activeIndex -= 1;
+                    normalizeIndex();
+                    applyTransforms();
+                };
+
+                prevButton.addEventListener('click', goToPrev);
+                nextButton.addEventListener('click', goToNext);
+
+                allItems.forEach(item => {
+                    item.addEventListener('click', (event) => {
+                        const offset = currentOffsets.get(item);
+                        if (offset === null || offset === undefined || offset === 0) return;
+
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        if (offset < 0) {
+                            goToPrev();
+                        } else {
+                            goToNext();
+                        }
+                    });
                 });
 
-                updateProjectsHeight();
+                viewport.addEventListener('touchstart', (event) => {
+                    touchStartX = event.touches[0].clientX;
+                    touchDeltaX = 0;
+                }, {
+                    passive: true
+                });
+
+                viewport.addEventListener('touchmove', (event) => {
+                    touchDeltaX = event.touches[0].clientX - touchStartX;
+                }, {
+                    passive: true
+                });
+
+                viewport.addEventListener('touchend', () => {
+                    const swipeThreshold = 45;
+                    if (touchDeltaX > swipeThreshold) {
+                        goToPrev();
+                    } else if (touchDeltaX < -swipeThreshold) {
+                        goToNext();
+                    }
+                });
+
+                const setFilter = (predicate) => {
+                    visibleItems = allItems.filter(predicate);
+                    visibleItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+
+                    allItems.forEach(item => {
+                        if (!visibleItems.includes(item)) {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    activeIndex = 0;
+                    normalizeIndex();
+                    applyTransforms();
+                };
+
+                normalizeIndex();
+                applyTransforms();
+
+                return {
+                    refresh: applyTransforms,
+                    setFilter
+                };
             };
 
-            const goToNextProject = () => {
-                projectsIndex = (projectsIndex + 1) % projectCards.length;
-                updateProjectsCarousel();
-            };
-
-            const goToPrevProject = () => {
-                projectsIndex = (projectsIndex - 1 + projectCards.length) % projectCards.length;
-                updateProjectsCarousel();
-            };
-
-            projectsPrevBtn.addEventListener('click', goToPrevProject);
-            projectsNextBtn.addEventListener('click', goToNextProject);
-
-            projectsViewport.addEventListener('touchstart', (event) => {
-                touchStartX = event.touches[0].clientX;
-                touchDeltaX = 0;
-            }, {
-                passive: true
+            const projectsCarouselController = initPopCarousel({
+                viewportId: 'projects-viewport',
+                trackId: 'projects-carousel',
+                prevButtonId: 'projects-prev-btn',
+                nextButtonId: 'projects-next-btn',
+                itemSelector: '.project-card',
+                mobileSpacingFactor: 0.9,
+                mobileSpacingMax: 320,
+                desktopSpacingFactor: 0.48,
+                desktopSpacingMax: 430,
+                activeScale: 1.07,
+                nearScale: 0.9,
+                farScale: 0.82,
+                nearOpacity: 0.72,
+                farOpacity: 0.3,
+                sideYOffset: 14,
+                heightPadding: 28
             });
 
-            projectsViewport.addEventListener('touchmove', (event) => {
-                touchDeltaX = event.touches[0].clientX - touchStartX;
-            }, {
-                passive: true
+            const showcaseCarouselController = initPopCarousel({
+                viewportId: 'showcase-viewport',
+                trackId: 'carousel',
+                prevButtonId: 'prev-btn',
+                nextButtonId: 'next-btn',
+                itemSelector: '.showcase-card',
+                mobileSpacingFactor: 0.88,
+                mobileSpacingMax: 340,
+                desktopSpacingFactor: 0.44,
+                desktopSpacingMax: 420,
+                activeScale: 1.05,
+                nearScale: 0.9,
+                farScale: 0.84,
+                nearOpacity: 0.74,
+                farOpacity: 0.34,
+                sideYOffset: 12,
+                heightPadding: 26
             });
 
-            projectsViewport.addEventListener('touchend', () => {
-                const swipeThreshold = 45;
-                if (touchDeltaX > swipeThreshold) {
-                    goToPrevProject();
-                } else if (touchDeltaX < -swipeThreshold) {
-                    goToNextProject();
-                }
+            const officersCarouselController = initPopCarousel({
+                viewportId: 'officer-viewport',
+                trackId: 'officer-carousel',
+                prevButtonId: 'officer-prev-btn',
+                nextButtonId: 'officer-next-btn',
+                itemSelector: '.officer-card',
+                mobileSpacingFactor: 0.9,
+                mobileSpacingMax: 320,
+                desktopSpacingFactor: 0.47,
+                desktopSpacingMax: 420,
+                activeScale: 1.06,
+                nearScale: 0.9,
+                farScale: 0.84,
+                nearOpacity: 0.74,
+                farOpacity: 0.34,
+                sideYOffset: 14,
+                heightPadding: 28
             });
 
-            window.addEventListener('resize', updateProjectsCarousel);
-            updateProjectsCarousel();
+            window.addEventListener('resize', () => {
+                projectsCarouselController.refresh();
+                showcaseCarouselController.refresh();
+                officersCarouselController.refresh();
+            });
 
             // Statistics counter animation
             const counters = [{
@@ -670,6 +804,7 @@
 
             // Officer filter menu
             const filterButtons = document.querySelectorAll('.officer-filter');
+            const officerCards = document.querySelectorAll('.officer-card');
 
             filterButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -684,12 +819,8 @@
 
                 const filter = button.dataset.filter;
 
-                officerCards.forEach(card => {
-                if (filter === 'all' || card.classList.contains(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                officersCarouselController.setFilter(card => {
+                    return filter === 'all' || card.classList.contains(filter);
                 });
             });
             });
