@@ -14,7 +14,7 @@ We publish two types of project pages:
 - `index.html`: Main homepage, featuring Program Teams and Individual Projects carousels
 - `pages/student-projects.html`: Full listing page for both categories
 - `pages/portfolio-template.html`: Starter template for new student portfolio pages
-- `pages/portfolio-example-solar-rover.html`: Example completed portfolio page
+- `pages/portfolio-example-solar-rover.html`: Legacy sample portfolio page, kept for reference and not featured in navigation
 - `photos/`: Shared media assets
 
 ## Add a New Individual Portfolio

@@ -38,19 +38,88 @@
             <p class="text-lg md:text-xl text-sky-100 max-w-3xl">
                 Explore both official Program Teams and Individual Projects. Program Teams are recurring organizations, while Individual Projects are personal portfolio pages by student makers.
             </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#featured-project" class="inline-flex items-center rounded-full bg-white text-sky-700 font-semibold px-4 py-2 hover:bg-sky-50 transition-colors">Featured project</a>
+                <a href="#program-teams" class="inline-flex items-center rounded-full bg-sky-500 text-white font-semibold px-4 py-2 hover:bg-sky-400 transition-colors">Program teams</a>
+                <a href="#individual-projects" class="inline-flex items-center rounded-full bg-sky-500 text-white font-semibold px-4 py-2 hover:bg-sky-400 transition-colors">Individual projects</a>
+                <a href="#get-published" class="inline-flex items-center rounded-full bg-sky-500 text-white font-semibold px-4 py-2 hover:bg-sky-400 transition-colors">Start a portfolio</a>
+            </div>
         </div>
     </header>
 
     <main class="py-14 space-y-14">
+        <section id="featured-project" class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <article class="bg-white border border-sky-100 rounded-2xl shadow-md p-8">
+                    <p class="inline-flex text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Program Update</p>
+                    <h2 class="text-3xl font-bold mb-3">Japan Trip to Interstellar Space</h2>
+                    <p class="text-gray-700 text-lg mb-6">A real trip recap from the team visit to Japan, where students met with Interstellar Space and saw the CubeSat launch work up close. This is a team news item, not an individual portfolio project.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-sm">
+                        <div class="bg-sky-50 rounded-xl p-4">
+                            <p class="font-semibold text-sky-900">What it shows</p>
+                            <p class="text-sky-800">A real team trip and launch visit</p>
+                        </div>
+                        <div class="bg-sky-50 rounded-xl p-4">
+                            <p class="font-semibold text-sky-900">Best for</p>
+                            <p class="text-sky-800">Showing current activity and proof</p>
+                        </div>
+                        <div class="bg-sky-50 rounded-xl p-4">
+                            <p class="font-semibold text-sky-900">Next action</p>
+                            <p class="text-sky-800">Read the summary and view photos</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="#individual-projects" class="inline-block text-center bg-sky-600 text-white font-bold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">See Student Portfolios</a>
+                        <a href="portfolio-template.html" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full hover:bg-sky-50 transition-colors">Use the Template</a>
+                    </div>
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <img src="../photos/Rocket Tour.jpg" alt="Team members during the Japan trip to Interstellar Space" class="w-full h-52 object-cover rounded-xl">
+                        <img src="../photos/Rocket Tour2.jpg" alt="Students visiting the launch site and mission area" class="w-full h-52 object-cover rounded-xl">
+                        <img src="../photos/Rocket Tour3.jpg" alt="Team photo from the Japan CubeSat visit" class="w-full h-52 object-cover rounded-xl">
+                    </div>
+                </article>
+                <aside class="bg-slate-900 text-white rounded-2xl shadow-md p-8">
+                    <p class="inline-flex text-xs font-bold uppercase tracking-wide bg-sky-500 text-white rounded-full px-3 py-1 mb-4">Why this page exists</p>
+                    <h2 class="text-3xl font-bold mb-3">Make the hub useful, not just visible.</h2>
+                    <p class="text-slate-200 mb-6">Visitors should quickly understand what they can browse, what is currently live, and what they can do next. This page should make it easy to explore, submit, or start a portfolio.</p>
+                    <ul class="space-y-3 text-slate-200">
+                        <li>Browse teams and student work without hunting for links.</li>
+                        <li>See enough detail to know whether a project is worth clicking.</li>
+                        <li>Move straight into the template or request form when ready.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
         <section class="container mx-auto px-4 max-w-6xl">
             <div class="bg-white border border-sky-100 rounded-2xl shadow-md p-8 text-center">
                 <h2 class="text-3xl font-bold mb-3">Want your own maker page?</h2>
                 <p class="text-gray-600 mb-6 max-w-3xl mx-auto">
-                    Use the portfolio starter template, then submit your page request so we can publish it under the shared domain.
+                    Use the portfolio starter template, then submit your page request so we can publish it under the shared domain. Include real images, a short build summary, and one clear next step.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-3">
                     <a href="portfolio-template.html" class="inline-block bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors">Use Portfolio Template</a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block bg-white border border-sky-600 text-sky-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Submit Portfolio Request</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-4 max-w-6xl">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+                <h2 class="text-2xl font-bold mb-3">How to use this hub</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-gray-700">
+                    <div class="bg-gray-50 rounded-xl p-5">
+                        <p class="font-semibold text-gray-900 mb-2">1. Browse</p>
+                        <p>Start with the featured project, then scan teams and portfolios to find the kind of work you want to see.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5">
+                        <p class="font-semibold text-gray-900 mb-2">2. Compare</p>
+                        <p>Look for project status, focus area, and proof points so you can tell which pages are current and useful.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-5">
+                        <p class="font-semibold text-gray-900 mb-2">3. Act</p>
+                        <p>When you are ready, open the template or submit a request to publish your own page.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,28 +131,48 @@
                 <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
                     <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Program Team</span>
                     <h2 class="text-2xl font-bold mb-2">Untitled Rocketry</h2>
-                    <p class="text-gray-600 mb-6">A student-run rocketry team competing in the American Rocketry Challenge.</p>
+                    <p class="text-gray-600 mb-4">A student-run rocketry team competing in the American Rocketry Challenge.</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>Focus: rocket design, testing, and iteration</li>
+                        <li>Status: active team page</li>
+                        <li>CTA: see the team site</li>
+                    </ul>
                     <a href="https://untitledrocketry.fremontstudentmakers.org/" class="mt-auto inline-block text-center bg-sky-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">Visit Team</a>
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
                     <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Program Team</span>
                     <h2 class="text-2xl font-bold mb-2">Irvington Maker Club</h2>
-                    <p class="text-gray-600 mb-6">Workshops, build challenges, and collaborative prototyping for student makers.</p>
+                    <p class="text-gray-600 mb-4">Workshops, build challenges, and collaborative prototyping for student makers.</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>Focus: hands-on making and peer learning</li>
+                        <li>Status: workshop-based team page</li>
+                        <li>CTA: visit the club site</li>
+                    </ul>
                     <a href="https://ihsmakers.fremontstudentmakers.org/" class="mt-auto inline-block text-center bg-sky-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">Visit Team</a>
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
                     <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Program Team</span>
                     <h2 class="text-2xl font-bold mb-2">MakerSat</h2>
-                    <p class="text-gray-600 mb-6">Students design and build CubeSat systems with support from mentors and engineers.</p>
+                    <p class="text-gray-600 mb-4">Students design and build CubeSat systems with support from mentors and engineers.</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>Focus: systems engineering and space hardware</li>
+                        <li>Status: active team page</li>
+                        <li>CTA: explore the mission</li>
+                    </ul>
                     <a href="https://makersat.fremontstudentmakers.org/" class="mt-auto inline-block text-center bg-sky-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">Visit Team</a>
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
                     <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Program Team</span>
                     <h2 class="text-2xl font-bold mb-2">Take 3 Robotics</h2>
-                    <p class="text-gray-600 mb-6">A First Tech Challenge team focused on fast iteration, control systems, and strategy.</p>
+                    <p class="text-gray-600 mb-4">A First Tech Challenge team focused on fast iteration, control systems, and strategy.</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>Focus: robotics, controls, and competition prep</li>
+                        <li>Status: active team page</li>
+                        <li>CTA: see the competition team</li>
+                    </ul>
                     <a href="https://take3.fremontstudentmakers.org/" class="mt-auto inline-block text-center bg-sky-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">Visit Team</a>
                 </article>
             </div>
@@ -91,28 +180,57 @@
 
         <section id="individual-projects" class="container mx-auto px-4 max-w-6xl">
             <h2 class="text-3xl font-bold mb-2">Individual Projects</h2>
-            <p class="text-gray-600 mb-8">Portfolio pages built by individual students to showcase personal maker work.</p>
+            <p class="text-gray-600 mb-8">Portfolio pages built by individual students to showcase personal maker work. If a project is not ready yet, use the template to create one instead of leaving a placeholder.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
                     <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-amber-100 text-amber-800 rounded-full px-3 py-1 mb-4">Individual Project</span>
-                    <h2 class="text-2xl font-bold mb-2">Solar Rover Build (EXAMPLE)</h2>
-                    <p class="text-gray-600 mb-6">John Doe documents design tradeoffs, CAD iterations, and field test notes for a lightweight rover.</p>
-                    <a href="portfolio-example-solar-rover.html" class="mt-auto inline-block text-center bg-sky-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-700 transition-colors">View Portfolio</a>
-                </article>
-
-                <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
-                    <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-amber-100 text-amber-800 rounded-full px-3 py-1 mb-4">Individual Project</span>
                     <h2 class="text-2xl font-bold mb-2">Smart Greenhouse Controller</h2>
-                    <p class="text-gray-600 mb-6">A personal control-system project for automated watering, airflow, and grow-light scheduling.</p>
+                    <p class="text-gray-600 mb-4">A personal control-system project for automated watering, airflow, and grow-light scheduling.</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>Missing: project images and build notes</li>
+                        <li>Status: draft page needed</li>
+                        <li>CTA: prepare submission</li>
+                    </ul>
                     <span class="mt-auto inline-block text-center bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-full">Publishing Soon</span>
                 </article>
 
                 <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
                     <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-amber-100 text-amber-800 rounded-full px-3 py-1 mb-4">Individual Project</span>
                     <h2 class="text-2xl font-bold mb-2">3D Printed Assist Grip</h2>
-                    <p class="text-gray-600 mb-6">A student portfolio exploring fast prototyping of low-cost assistive devices.</p>
+                    <p class="text-gray-600 mb-4">A student portfolio exploring fast prototyping of low-cost assistive devices.</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>Missing: metrics, photos, and links</li>
+                        <li>Status: draft page needed</li>
+                        <li>CTA: add content and publish</li>
+                    </ul>
                     <span class="mt-auto inline-block text-center bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-full">Publishing Soon</span>
                 </article>
+
+                <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center text-center">
+                    <span class="inline-flex w-max text-xs font-bold uppercase tracking-wide bg-sky-100 text-sky-800 rounded-full px-3 py-1 mb-4">Start Here</span>
+                    <h2 class="text-2xl font-bold mb-2">Launch Your Portfolio</h2>
+                    <p class="text-gray-600 mb-6">Use the blank template to turn your project into a real page with photos, results, and a clear call to action.</p>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <a href="portfolio-template.html" class="inline-block bg-sky-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-700 transition-colors">Use Template</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Submit Request</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="get-published" class="container mx-auto px-4 max-w-6xl">
+            <div class="bg-slate-900 text-white rounded-2xl shadow-lg p-8 md:p-10">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <p class="inline-flex text-xs font-bold uppercase tracking-wide bg-sky-500 text-white rounded-full px-3 py-1 mb-4">Next Step</p>
+                        <h2 class="text-3xl font-bold mb-3">Have a project to show?</h2>
+                        <p class="text-slate-200">Use the template to add real content, then submit your request so the page can be reviewed and published. The stronger the details, the better the page performs.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="portfolio-template.html" class="inline-block text-center bg-white text-slate-900 font-bold py-3 px-6 rounded-full hover:bg-slate-100 transition-colors">Start a Portfolio</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block text-center bg-sky-500 text-white font-bold py-3 px-6 rounded-full hover:bg-sky-400 transition-colors">Submit a Request</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

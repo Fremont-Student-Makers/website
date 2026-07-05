@@ -283,7 +283,7 @@
             <div class="hidden space-x-6">
                 <a href="#about" class="hover:text-sky-600 transition-colors">About</a>
                 <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
-                <a href="pages/student-projects.html#individual-projects" class="hover:text-sky-600 transition-colors">Portfolios</a>
+                <a href="pages/student-projects.html" class="hover:text-sky-600 transition-colors">Projects Hub</a>
                 <a href="#officers" class="hover:text-sky-600 transition-colors">Officers</a>
                 <a href="#events" class="hover:text-sky-600 transition-colors">Events</a>
                 <a href="#donate" class="hover:text-sky-600 transition-colors">Donate</a>
@@ -303,7 +303,7 @@
         <nav>
             <a href="#about" class="block py-3 hover:bg-gray-100 transition-colors">About</a>
             <a href="#projects" class="block py-3 hover:bg-gray-100 transition-colors">Projects</a>
-            <a href="pages/student-projects.html#individual-projects" class="block py-3 hover:bg-gray-100 transition-colors">Portfolios</a>
+            <a href="pages/student-projects.html" class="block py-3 hover:bg-gray-100 transition-colors">Projects Hub</a>
             <a href="#officers" class="block py-3 hover:bg-gray-100 transition-colors">Officers</a>
             <a href="#events" class="block py-3 hover:bg-gray-100 transition-colors">Events</a>
             <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
@@ -418,54 +418,26 @@
             </div>
 
             <h3 class="projects-lane-title mt-10">Individual Projects</h3>
-            <p class="projects-lane-copy">Personal maker portfolios hosted under our shared student maker ecosystem.</p>
-            <div id="individual-projects-viewport" class="pop-carousel-viewport max-w-6xl mx-auto">
-                <div id="individual-projects-carousel" class="pop-carousel-track w-full" data-carousel-type="individual-projects">
-                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+            <p class="projects-lane-copy">One simple portfolio launch path for students who want to publish their own work.</p>
+            <div class="max-w-3xl mx-auto">
+                <article class="bg-white rounded-xl shadow-lg p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+                    <div class="flex-1">
                         <span class="project-category-badge individual">Individual Project</span>
-                        <h3 class="text-2xl font-semibold mb-2">Solar Rover Build</h3>
-                        <p class="text-gray-600 mb-6">A lightweight autonomous rover prototype built by a student team member for terrain testing.</p>
-                        <a href="pages/portfolio-example-solar-rover.html" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">View Portfolio</a>
+                        <h3 class="text-2xl font-semibold mb-2">Launch Your Portfolio</h3>
+                        <p class="text-gray-600 mb-4">Use the personal profile example at the link below as the reference for how a finished student page can look and feel.</p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>Reference profile: clean layout and real content</li>
+                            <li>Best for: students who want a simple starting point</li>
+                            <li>Next step: open the profile and start yours</li>
+                        </ul>
                     </div>
-
-                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
-                        <span class="project-category-badge individual">Individual Project</span>
-                        <h3 class="text-2xl font-semibold mb-2">Smart Greenhouse Controller</h3>
-                        <p class="text-gray-600 mb-6">Automated temperature, humidity, and lighting control for a small classroom greenhouse setup.</p>
-                        <a href="pages/student-projects.html#individual-projects" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">See Showcase</a>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="https://earthrise8.github.io/dylankwok/" class="inline-block text-center bg-sky-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Open Profile</a>
+                        <a href="pages/portfolio-template.html" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Use Template</a>
                     </div>
-
-                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
-                        <span class="project-category-badge individual">Individual Project</span>
-                        <h3 class="text-2xl font-semibold mb-2">3D Printed Assist Grip</h3>
-                        <p class="text-gray-600 mb-6">A modular assistive grip concept focused on affordable fabrication and rapid user feedback loops.</p>
-                        <a href="pages/student-projects.html#individual-projects" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">See Showcase</a>
-                    </div>
-
-                    <div class="individual-project-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
-                        <div class="text-center">
-                            <span class="project-category-badge individual">Individual Project</span>
-                            <h3 class="text-2xl font-semibold mb-2">Launch Your Portfolio</h3>
-                            <p class="text-gray-600 mb-6">Use our starter template and submit your project to get featured on the shared domain.</p>
-                            <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                                <a href="pages/portfolio-template.html" class="inline-block bg-sky-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-700 transition-colors">Use Template</a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Submit Request</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button id="individual-projects-prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous individual project">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="individual-projects-next-btn" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Next individual project">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+                </article>
             </div>
-        </div>
+
     </section>
 
     <!-- Photo Carousel Section -->
@@ -475,13 +447,13 @@
             <div id="showcase-viewport" class="pop-carousel-viewport relative w-full max-w-5xl mx-auto">
                 <div id="carousel" class="pop-carousel-track w-full" data-carousel-type="showcase">
                     <div class="showcase-card pop-carousel-item bg-white rounded-xl shadow-lg p-3">
-                        <img src="photos/TeamPhoto.jpg" alt="Team photo" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
+                        <img src="photos/Rocket Tour.jpg" alt="Japan trip to Interstellar Space" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
                     </div>
                     <div class="showcase-card pop-carousel-item bg-white rounded-xl shadow-lg p-3">
-                        <img src="photos/Meeting.jpg" alt="Workshop photo" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
+                        <img src="photos/Rocket Tour2.jpg" alt="Interstellar Space launch visit" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
                     </div>
                     <div class="showcase-card pop-carousel-item bg-white rounded-xl shadow-lg p-3">
-                        <img src="photos/UntitledRocket.png" alt="Project showcase" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
+                        <img src="photos/Rocket Tour3.jpg" alt="Team photo from the Japan trip" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg">
                     </div>
                 </div>
                 <button id="prev-btn" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-200 focus:outline-none z-10" aria-label="Previous showcase image">
@@ -942,25 +914,6 @@
                 heightPadding: 28
             });
 
-            const individualProjectsCarouselController = initPopCarousel({
-                viewportId: 'individual-projects-viewport',
-                trackId: 'individual-projects-carousel',
-                prevButtonId: 'individual-projects-prev-btn',
-                nextButtonId: 'individual-projects-next-btn',
-                itemSelector: '.individual-project-card',
-                mobileSpacingFactor: 0.9,
-                mobileSpacingMax: 320,
-                desktopSpacingFactor: 0.47,
-                desktopSpacingMax: 420,
-                activeScale: 1.06,
-                nearScale: 0.9,
-                farScale: 0.84,
-                nearOpacity: 0.74,
-                farOpacity: 0.34,
-                sideYOffset: 14,
-                heightPadding: 24
-            });
-
             const showcaseCarouselController = initPopCarousel({
                 viewportId: 'showcase-viewport',
                 trackId: 'carousel',
@@ -1001,7 +954,6 @@
 
             window.addEventListener('resize', () => {
                 programTeamsCarouselController.refresh();
-                individualProjectsCarouselController.refresh();
                 showcaseCarouselController.refresh();
                 officersCarouselController.refresh();
             });
