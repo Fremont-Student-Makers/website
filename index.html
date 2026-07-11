@@ -43,234 +43,7 @@
             ]
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .hamburger-icon span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #333;
-            margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-icon.open span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .hamburger-icon.open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-icon.open span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        .menu-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(17, 24, 39, 0.55);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.35s ease;
-            z-index: 55;
-        }
-
-        .menu-backdrop.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .menu-drawer {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            width: min(86vw, 360px);
-            background: #ffffff;
-            box-shadow: -18px 0 40px rgba(17, 24, 39, 0.2);
-            transform: translateX(100%);
-            transition: transform 0.35s ease;
-            z-index: 60;
-            padding: 88px 0 24px;
-        }
-
-        .menu-drawer.open {
-            transform: translateX(0);
-        }
-
-        .menu-drawer a {
-            display: block;
-            padding: 16px 28px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #1f2937;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .menu-drawer a:hover {
-            background-color: #f3f4f6;
-            color: #0284c7;
-        }
-
-        .project-category-badge {
-            display: inline-flex;
-            align-items: center;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            border-radius: 9999px;
-            padding: 4px 10px;
-            margin-bottom: 14px;
-        }
-
-        .project-category-badge.team {
-            background: #e0f2fe;
-            color: #075985;
-        }
-
-        .project-category-badge.individual {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .projects-lane-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin: 8px 0 4px;
-        }
-
-        .projects-lane-copy {
-            text-align: center;
-            color: #4b5563;
-            margin-bottom: 16px;
-        }
-
-        .counter-container {
-            position: relative;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Fade-in animation styles */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-in.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .pop-carousel-viewport {
-            position: relative;
-            overflow: hidden;
-            padding: 20px 0 12px;
-        }
-
-        .pop-carousel-track {
-            position: relative;
-        }
-
-        .pop-carousel-track[data-carousel-type="program-teams"] {
-            min-height: 470px;
-        }
-
-        .pop-carousel-track[data-carousel-type="individual-projects"] {
-            min-height: 430px;
-        }
-
-        .pop-carousel-track[data-carousel-type="showcase"] {
-            min-height: 360px;
-        }
-
-        .pop-carousel-track[data-carousel-type="officers"] {
-            min-height: 430px;
-        }
-
-        .pop-carousel-item {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: min(88vw, 360px);
-            transition: transform 450ms ease, opacity 450ms ease, box-shadow 450ms ease;
-            transform-origin: center center;
-            will-change: transform, opacity;
-        }
-
-        .pop-carousel-item.is-active {
-            box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.28);
-        }
-
-        @media (min-width: 640px) {
-            .pop-carousel-track[data-carousel-type="program-teams"] {
-                min-height: 500px;
-            }
-
-            .pop-carousel-track[data-carousel-type="individual-projects"] {
-                min-height: 470px;
-            }
-
-            .pop-carousel-track[data-carousel-type="showcase"] {
-                min-height: 420px;
-            }
-
-            .pop-carousel-track[data-carousel-type="officers"] {
-                min-height: 460px;
-            }
-
-            .pop-carousel-item {
-                width: min(46vw, 380px);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .pop-carousel-track[data-carousel-type="program-teams"] {
-                min-height: 520px;
-            }
-
-            .pop-carousel-track[data-carousel-type="individual-projects"] {
-                min-height: 500px;
-            }
-
-            .pop-carousel-track[data-carousel-type="showcase"] {
-                min-height: 470px;
-            }
-
-            .pop-carousel-track[data-carousel-type="officers"] {
-                min-height: 500px;
-            }
-
-            .pop-carousel-item {
-                width: min(30vw, 380px);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -288,6 +61,7 @@
                 <a href="#events" class="hover:text-sky-600 transition-colors">Events</a>
                 <a href="#donate" class="hover:text-sky-600 transition-colors">Donate</a>
                 <a href="#contact" class="hover:text-sky-600 transition-colors">Contact</a>
+                <a href="#resources" class="hover:text-sky-600 transition-colors">Resources</a>
                 <a href="#join" class="hover:text-sky-600 transition-colors">Join</a>
             </div>
             <button id="hamburger-btn" class="hamburger-icon focus:outline-none" aria-label="Open navigation menu" aria-expanded="false">
@@ -308,13 +82,14 @@
             <a href="#events" class="block py-3 hover:bg-gray-100 transition-colors">Events</a>
             <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
             <a href="#contact" class="block py-3 hover:bg-gray-100 transition-colors">Contact</a>
+            <a href="#resources" class="block py-3 hover:bg-gray-100 transition-colors">Resources</a>
             <a href="#join" class="block py-3 hover:bg-gray-100 transition-colors">Join</a>
         </nav>
     </aside>
 
     <!-- Hero Section -->
-    <header class="bg-sky-600 text-white min-h-screen flex items-center justify-center text-center p-8">
-        <div class="max-w-3xl">
+    <header class="hero-accent bg-sky-600 text-white min-h-screen flex items-center justify-center text-center p-8">
+        <div class="hero-content max-w-3xl">
             <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Innovate. Create. Build.</h1>
             <p class="text-xl md:text-2xl mb-8">Empowering the next generation of innovators in Fremont through hands-on projects and collaborative learning.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="bg-white text-sky-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Join Us Today</a>
@@ -325,13 +100,21 @@
     <section id="about" class="section-padding bg-gray-100 fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto px-6">
                 <div class="md:w-1/2">
+                    <p class="text-sm font-bold uppercase tracking-wide text-sky-700 mb-3">Our Mission</p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Fremont Student Makers helps high school students do real engineering before college by giving them access to collaborative teams, ambitious projects, mentorship, and a community that takes student builders seriously.
+                    </p>
+                    <p class="text-sm font-bold uppercase tracking-wide text-sky-700 mb-3">Our Story</p>
                     <p class="text-lg leading-relaxed mb-4">
-                        Fremont Student Makers is a community of passionate young builders, designers, and engineers. We believe that the best way to learn is by doing. Our club provides the resources, mentorship, and space for students to bring their creative ideas to life, from robotics to 3D printing and beyond.
+                        One of humanity's earliest desires is to build things. Whether it is a sand castle, a LEGO set, an electronics kit, or the Great Pyramids of Giza, people want to create things they can be proud of.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Many of us grew up with that same drive, but school often asked us to watch, write, or follow instructions instead of building firsthand. We saw students with serious engineering ambitions hit the limits of what school resources could support.
                     </p>
                     <p class="text-lg leading-relaxed">
-                        We are dedicated to fostering a culture of innovation and collaboration, helping students develop critical skills in problem-solving and teamwork.
+                        So students from across Fremont came together to create Fremont Student Makers. Today, we connect builders across four area high schools, reach more than 1,000 students, and help new members learn the engineering design process by doing it themselves. Our long-term goal is to create a student-run makerspace that becomes a lasting part of student development in Fremont.
                     </p>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -356,7 +139,7 @@
                         <img src="photos/Untitled_Artwork.png" alt="Untitled Rocketry" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
                         <p class="text-gray-600 mb-6">
-                            A student-run rocketry team competing in the American Rocketry Challenge.
+                            A student-run rocketry team where members design, test, and iterate rockets while preparing for the American Rocketry Challenge.
                         </p>
                          <a href="https://untitledrocketry.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
@@ -366,17 +149,17 @@
                         <img src="photos/ihsmakerclublogo.png" alt="Irvington Maker Club" class="rounded-lg mb-4">
                         <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
                         <p class="text-gray-600 mb-6">
-                            A student-run maker space hosting workshops and build challenges.
+                            A Fremont Student Makers branch at Irvington High School focused on Invention Convention, accessible engineering projects, and engaging student workshops.
                         </p>
                         <a href="https://ihsmakers.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
 
                     <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
                         <span class="project-category-badge team">Program Team</span>
-                        <img src="photos/MakerSat.jpg" alt="MakerSat" class="rounded-lg mb-4">
-                        <h3 class="text-2xl font-semibold mb-2">MakerSat</h3>
+                        <img src="photos/MakerSat.jpg" alt="Maker^3 CubeSat project" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Maker^3</h3>
                         <p class="text-gray-600 mb-6">
-                            An advanced project where students design, build, and launch a CubeSat.
+                            A student-led CubeSat initiative in partnership with Lothan Space, spanning avionics, subsystem boards, and flight and mission software.
                         </p>
                         <a href="https://makersat.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
                     </div>
@@ -384,11 +167,26 @@
                     <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
                         <span class="project-category-badge team">Program Team</span>
                         <img src="photos/take3.png" alt="Take 3" class="rounded-lg mb-4">
-                        <h3 class="text-2xl font-semibold mb-2">Take 3</h3>
+                        <h3 class="text-2xl font-semibold mb-2">Take 3 Robotics</h3>
                         <p class="text-gray-600 mb-6">
-                            A student team competing in the First Tech Challenge robotics competition.
+                            Our FTC robotics team introduces members to applied software and hardware engineering in a smaller, structured team environment.
                         </p>
                         <a href="https://take3.fremontstudentmakers.org/" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Learn More</a>
+                    </div>
+
+                    <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col">
+                        <span class="project-category-badge team">Program Team</span>
+                        <img src="photos/comingsoon.jpg" alt="Ignition vehicle engineering project" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Ignition</h3>
+                        <p class="text-gray-600 mb-6">
+                            A developing student vehicle and mobility engineering project exploring mechanical design, controls, and practical prototyping.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>Focus: vehicle design, controls, and prototyping</li>
+                            <li>Status: developing team page</li>
+                            <li>CTA: contact FSM for current details</li>
+                        </ul>
+                        <a href="#contact" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105 mt-auto text-center">Contact FSM</a>
                     </div>
 
                     <div class="program-team-card pop-carousel-item bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 flex flex-col items-center justify-center">
@@ -478,7 +276,7 @@
                 <!-- Google Calendar Embed -->
                 <!-- To use your own calendar, replace the 'src' URL with your calendar's embed URL from Google Calendar settings. -->
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=en.usa%23holiday%40group.v.calendar.google.com&color=%230B8043&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showNav=1"
-                    style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" class="rounded-xl shadow-lg w-full max-w-4xl"></iframe>
+                    width="800" height="600" frameborder="0" scrolling="no" class="calendar-frame rounded-xl shadow-lg w-full max-w-4xl"></iframe>
             </div>
         </div>
     </section>
@@ -580,7 +378,7 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-8">Support Our Mission</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">
-                Your donation helps us provide tools, materials, and opportunities for our students. Every contribution, no matter the size, makes a difference in empowering the next generation of makers.
+                Fremont Student Makers is a 501(c)(3) nonprofit. Your donation helps us provide tools, materials, mentorship, and ambitious build opportunities for students across Fremont.
             </p>
             <a href="#" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition-colors transform hover:scale-105">Donate Now</a>
         </div>
@@ -598,6 +396,7 @@
      <div class="md:w-auto bg-white p-8 rounded-xl shadow-lg flex flex-col items-start space-y-6">
 
           <h3 class="text-2xl font-bold">Get in Touch</h3>
+          <p class="text-sm text-gray-600 -mt-3">Fremont Student Makers is a 501(c)(3) nonprofit. EIN: 39-2874617.</p>
         
           <!-- Address -->
           <div class="flex items-center gap-4">
@@ -605,7 +404,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C8 2 4 6 4 10c0 7 8 12 8 12s8-5 8-12c0-4-4-8-8-8z" />
             </svg>
-            <span>38136 Smith Ct, Fremont CA, 94536</span>
+            <span>38136 Smith Ct, Fremont, CA 94536</span>
           </div>
         
           <!-- Email -->
@@ -652,6 +451,30 @@
 </section>
 
 
+     <!-- Resources Section -->
+        <section id="resources" class="section-padding fade-in">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                        <div class="max-w-2xl">
+                            <p class="text-sm font-bold uppercase tracking-wide text-sky-700 mb-3">Resources</p>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4">Student Member Links</h2>
+                            <p class="text-lg text-gray-600">
+                                Quick access for students who are part of Fremont Student Makers or ready to publish work through the nonprofit.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full lg:w-auto">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScqosfKAuKaeXeggtijtrKIO1H6KksA-CH4-qSepQBG25a-gQ/viewform?usp=header" class="inline-block text-center bg-sky-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-700 transition-colors">Join Form</a>
+                            <a href="pages/student-projects.html" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Projects Hub</a>
+                            <a href="pages/portfolio-template.html" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Portfolio Template</a>
+                            <a href="mailto:info@fremontstudentmakers.org" class="inline-block text-center bg-white border border-sky-600 text-sky-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-sky-50 transition-colors">Email FSM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
      <!-- Join Section -->
         <section id="join" class="section-padding fade-in">
             <div class="container mx-auto px-4 text-center">
@@ -668,386 +491,14 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 text-center">
-        <p>&copy; 2026 Fremont Student Makers. 501(c) Nonprofit. EIN: 39-2874617</p>
+        <p>&copy; 2026 Fremont Student Makers. 501(c)(3) Nonprofit. EIN: 39-2874617</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Hamburger menu toggle
-            const hamburgerBtn = document.getElementById('hamburger-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
-            const toggleMenu = (forceOpen) => {
-                const shouldOpen = forceOpen ?? !mobileMenu.classList.contains('open');
-
-                hamburgerBtn.classList.toggle('open', shouldOpen);
-                hamburgerBtn.setAttribute('aria-expanded', String(shouldOpen));
-                mobileMenu.classList.toggle('open', shouldOpen);
-                mobileMenu.setAttribute('aria-hidden', String(!shouldOpen));
-                mobileMenuBackdrop.classList.toggle('open', shouldOpen);
-                document.body.classList.toggle('overflow-hidden', shouldOpen);
-            };
-
-            hamburgerBtn.addEventListener('click', () => {
-                toggleMenu();
-            });
-
-            mobileMenuBackdrop.addEventListener('click', () => toggleMenu(false));
-
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => toggleMenu(false));
-            });
-
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
-                    toggleMenu(false);
-                }
-            });
-
-            // Shared pop-out carousel functionality
-            const getCircularOffset = (index, activeIndex, total) => {
-                let offset = index - activeIndex;
-                if (offset > total / 2) offset -= total;
-                if (offset < -total / 2) offset += total;
-                return offset;
-            };
-
-            const initPopCarousel = ({
-                viewportId,
-                trackId,
-                prevButtonId,
-                nextButtonId,
-                itemSelector,
-                mobileSpacingFactor,
-                mobileSpacingMax,
-                desktopSpacingFactor,
-                desktopSpacingMax,
-                activeScale,
-                nearScale,
-                farScale,
-                nearOpacity,
-                farOpacity,
-                sideYOffset,
-                heightPadding
-            }) => {
-                const viewport = document.getElementById(viewportId);
-                const track = document.getElementById(trackId);
-                const prevButton = document.getElementById(prevButtonId);
-                const nextButton = document.getElementById(nextButtonId);
-                const allItems = Array.from(track.querySelectorAll(itemSelector));
-                let visibleItems = [...allItems];
-                let activeIndex = 0;
-                let touchStartX = 0;
-                let touchDeltaX = 0;
-                const currentOffsets = new Map();
-
-                const normalizeIndex = () => {
-                    if (!visibleItems.length) {
-                        activeIndex = 0;
-                        return;
-                    }
-
-                    activeIndex = (activeIndex + visibleItems.length) % visibleItems.length;
-                };
-
-                const applyTransforms = () => {
-                    if (!visibleItems.length) {
-                        allItems.forEach(item => {
-                            item.classList.remove('is-active');
-                            item.style.opacity = '0';
-                            item.style.pointerEvents = 'none';
-                            item.style.zIndex = '0';
-                            currentOffsets.set(item, null);
-                        });
-                        track.style.height = '0px';
-                        return;
-                    }
-
-                    const viewportWidth = viewport.clientWidth;
-                    const isMobile = window.innerWidth < 640;
-                    const spacing = isMobile
-                        ? Math.min(viewportWidth * mobileSpacingFactor, mobileSpacingMax)
-                        : Math.min(viewportWidth * desktopSpacingFactor, desktopSpacingMax);
-
-                    let tallestItem = 0;
-                    allItems.forEach(item => {
-                        tallestItem = Math.max(tallestItem, item.offsetHeight);
-                    });
-                    track.style.height = `${tallestItem + heightPadding}px`;
-
-                    const visibleSet = new Set(visibleItems);
-                    allItems.forEach(item => {
-                        if (visibleSet.has(item)) return;
-                        item.classList.remove('is-active');
-                        item.style.opacity = '0';
-                        item.style.pointerEvents = 'none';
-                        item.style.zIndex = '0';
-                        item.style.transform = 'translate3d(-50%, 0, 0) scale(0.78)';
-                        currentOffsets.set(item, null);
-                    });
-
-                    visibleItems.forEach((item, index) => {
-                        const offset = getCircularOffset(index, activeIndex, visibleItems.length);
-                        const absoluteOffset = Math.abs(offset);
-                        currentOffsets.set(item, offset);
-
-                        item.classList.toggle('is-active', offset === 0);
-
-                        if (absoluteOffset > 2) {
-                            item.style.opacity = '0';
-                            item.style.pointerEvents = 'none';
-                            item.style.zIndex = '0';
-                            item.style.transform = `translate3d(calc(-50% + ${offset * spacing}px), 0, 0) scale(0.78)`;
-                            return;
-                        }
-
-                        const scale = offset === 0 ? activeScale : absoluteOffset === 1 ? nearScale : farScale;
-                        const opacity = offset === 0 ? 1 : absoluteOffset === 1 ? nearOpacity : farOpacity;
-                        const yOffset = offset === 0 ? 0 : sideYOffset;
-
-                        item.style.opacity = String(opacity);
-                        item.style.pointerEvents = absoluteOffset <= 1 ? 'auto' : 'none';
-                        item.style.zIndex = String(30 - absoluteOffset);
-                        item.style.transform = `translate3d(calc(-50% + ${offset * spacing}px), ${yOffset}px, 0) scale(${scale})`;
-                    });
-                };
-
-                const goToNext = () => {
-                    if (!visibleItems.length) return;
-                    activeIndex += 1;
-                    normalizeIndex();
-                    applyTransforms();
-                };
-
-                const goToPrev = () => {
-                    if (!visibleItems.length) return;
-                    activeIndex -= 1;
-                    normalizeIndex();
-                    applyTransforms();
-                };
-
-                prevButton.addEventListener('click', goToPrev);
-                nextButton.addEventListener('click', goToNext);
-
-                allItems.forEach(item => {
-                    item.addEventListener('click', (event) => {
-                        const offset = currentOffsets.get(item);
-                        if (offset === null || offset === undefined || offset === 0) return;
-
-                        event.preventDefault();
-                        event.stopPropagation();
-
-                        if (offset < 0) {
-                            goToPrev();
-                        } else {
-                            goToNext();
-                        }
-                    });
-                });
-
-                viewport.addEventListener('touchstart', (event) => {
-                    touchStartX = event.touches[0].clientX;
-                    touchDeltaX = 0;
-                }, {
-                    passive: true
-                });
-
-                viewport.addEventListener('touchmove', (event) => {
-                    touchDeltaX = event.touches[0].clientX - touchStartX;
-                }, {
-                    passive: true
-                });
-
-                viewport.addEventListener('touchend', () => {
-                    const swipeThreshold = 45;
-                    if (touchDeltaX > swipeThreshold) {
-                        goToPrev();
-                    } else if (touchDeltaX < -swipeThreshold) {
-                        goToNext();
-                    }
-                });
-
-                const setFilter = (predicate) => {
-                    visibleItems = allItems.filter(predicate);
-                    visibleItems.forEach(item => {
-                        item.style.display = 'block';
-                    });
-
-                    allItems.forEach(item => {
-                        if (!visibleItems.includes(item)) {
-                            item.style.display = 'none';
-                        }
-                    });
-
-                    activeIndex = 0;
-                    normalizeIndex();
-                    applyTransforms();
-                };
-
-                normalizeIndex();
-                applyTransforms();
-
-                return {
-                    refresh: applyTransforms,
-                    setFilter
-                };
-            };
-
-            const programTeamsCarouselController = initPopCarousel({
-                viewportId: 'program-teams-viewport',
-                trackId: 'program-teams-carousel',
-                prevButtonId: 'program-teams-prev-btn',
-                nextButtonId: 'program-teams-next-btn',
-                itemSelector: '.program-team-card',
-                mobileSpacingFactor: 0.9,
-                mobileSpacingMax: 320,
-                desktopSpacingFactor: 0.48,
-                desktopSpacingMax: 430,
-                activeScale: 1.07,
-                nearScale: 0.9,
-                farScale: 0.82,
-                nearOpacity: 0.72,
-                farOpacity: 0.3,
-                sideYOffset: 14,
-                heightPadding: 28
-            });
-
-            const showcaseCarouselController = initPopCarousel({
-                viewportId: 'showcase-viewport',
-                trackId: 'carousel',
-                prevButtonId: 'prev-btn',
-                nextButtonId: 'next-btn',
-                itemSelector: '.showcase-card',
-                mobileSpacingFactor: 0.88,
-                mobileSpacingMax: 340,
-                desktopSpacingFactor: 0.44,
-                desktopSpacingMax: 420,
-                activeScale: 1.05,
-                nearScale: 0.9,
-                farScale: 0.84,
-                nearOpacity: 0.74,
-                farOpacity: 0.34,
-                sideYOffset: 12,
-                heightPadding: 26
-            });
-
-            const officersCarouselController = initPopCarousel({
-                viewportId: 'officer-viewport',
-                trackId: 'officer-carousel',
-                prevButtonId: 'officer-prev-btn',
-                nextButtonId: 'officer-next-btn',
-                itemSelector: '.officer-card',
-                mobileSpacingFactor: 0.9,
-                mobileSpacingMax: 320,
-                desktopSpacingFactor: 0.47,
-                desktopSpacingMax: 420,
-                activeScale: 1.06,
-                nearScale: 0.9,
-                farScale: 0.84,
-                nearOpacity: 0.74,
-                farOpacity: 0.34,
-                sideYOffset: 14,
-                heightPadding: 28
-            });
-
-            window.addEventListener('resize', () => {
-                programTeamsCarouselController.refresh();
-                showcaseCarouselController.refresh();
-                officersCarouselController.refresh();
-            });
-
-            // Statistics counter animation
-            const counters = [{
-                id: 'projects-count',
-                target: 20
-            }, {
-                id: 'members-count',
-                target: 60
-            }, {
-                id: 'hours-count',
-                target: 200
-
-            }, ];
-
-            const animateCounter = (element, target) => {
-                let current = 0;
-                const increment = target / 200; // Adjust for speed
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        clearInterval(timer);
-                        element.textContent = target;
-                    } else {
-                        element.textContent = Math.ceil(current);
-                    }
-                }, 5);
-            };
-
-
-            // Officer filter menu
-            const filterButtons = document.querySelectorAll('.officer-filter');
-            const officerCards = document.querySelectorAll('.officer-card');
-
-            filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Button styles
-                filterButtons.forEach(btn => {
-                btn.classList.remove('bg-sky-600', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-700');
-                });
-
-                button.classList.add('bg-sky-600', 'text-white');
-                button.classList.remove('bg-white', 'text-gray-700');
-
-                const filter = button.dataset.filter;
-
-                officersCarouselController.setFilter(card => {
-                    return filter === 'all' || card.classList.contains(filter);
-                });
-            });
-            });
-
-
-            // Intersection Observer for fade-in animation
-            const fadeElements = document.querySelectorAll('.fade-in');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        // Optional: stop observing once it's visible
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-
-            fadeElements.forEach(el => observer.observe(el));
-
-
-            // Intersection Observer for statistics counter
-            const statsSection = document.querySelector('.section-padding.bg-sky-600');
-            const statsObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        counters.forEach(counter => {
-                            const element = document.getElementById(counter.id);
-                            animateCounter(element, counter.target);
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.5
-            }); // Trigger when 50% of the section is visible
-
-            statsObserver.observe(statsSection);
-        });
-    </script>
-
+    <script src="script.js" defer></script>
 </body>
 
 </html>
+
+
+
